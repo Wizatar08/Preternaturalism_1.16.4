@@ -1,0 +1,20 @@
+{
+  "type": "preternaturalism:container",
+  "input_container": {
+    "item": "preternaturalism:titanium_plated_container"
+  },
+  "input_ingredient": {
+    "item": "preternaturalism:backwards_bucket"
+  },
+  "output_container": {
+    "item": "preternaturalism:sulfur_gas_filled_titanium_plated_container"
+  },
+  "output_ingredient": {
+    "item": "preternaturalism:backwards_bucket"
+  },
+  "lava_predicate": false,
+  "contaminated_water_predicate": false,
+  "water_predicate": false,
+  "sulfur_gas_predicate": true,
+  "sulfur_liquid_predicate": false
+}

@@ -1,0 +1,20 @@
+{
+  "type": "preternaturalism:container",
+  "input_container": {
+    "item": "preternaturalism:titanium_plated_container"
+  },
+  "input_ingredient": {
+    "item": "preternaturalism:fluid_transporter_lava"
+  },
+  "output_container": {
+    "item": "preternaturalism:lava_filled_titanium_plated_container"
+  },
+  "output_ingredient": {
+    "item": "preternaturalism:metallic_obsidian_ingot"
+  },
+  "lava_predicate": true,
+  "contaminated_water_predicate": false,
+  "water_predicate": false,
+  "sulfur_gas_predicate": false,
+  "sulfur_liquid_predicate": false
+}

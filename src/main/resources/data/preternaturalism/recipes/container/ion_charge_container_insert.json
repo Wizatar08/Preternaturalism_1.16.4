@@ -1,0 +1,20 @@
+{
+  "type": "preternaturalism:container",
+  "input_container": {
+    "item": "preternaturalism:titanium_plated_container"
+  },
+  "input_ingredient": {
+    "item": "preternaturalism:ion_charge"
+  },
+  "output_container": {
+    "item": "preternaturalism:ion_charge_filled_titanium_plated_container"
+  },
+  "output_ingredient": {
+    "item": "minecraft:air"
+  },
+  "lava_predicate": false,
+  "contaminated_water_predicate": false,
+  "water_predicate": false,
+  "sulfur_gas_predicate": false,
+  "sulfur_liquid_predicate": false
+}
