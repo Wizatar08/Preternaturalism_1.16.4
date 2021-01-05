@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "preternaturalism:items/fluid_transporter_lava"
+    }
+}

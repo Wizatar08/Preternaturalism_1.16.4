@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "preternaturalism:items/ion_charge_filled_titanium_plated_container"
+    }
+}
