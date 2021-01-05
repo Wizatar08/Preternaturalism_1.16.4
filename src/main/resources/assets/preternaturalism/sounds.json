@@ -1,0 +1,53 @@
+{
+  "entity.ashen_crawler.ambient": {
+    "category": "entity",
+    "subtitle": "Ashen Crawler Breathes",
+
+    "sounds": [
+      {
+        "name": "preternaturalism:entity/entity.ashen_crawler.ambient",
+        "stream": true
+      }
+    ]
+  },
+  "entity.ashen_crawler.hurt": {
+    "category": "entity",
+    "subtitle": "Ashen Crawler Hurts",
+    "sounds": [
+      {
+        "name": "preternaturalism:entity/entity.ashen_crawler.hurt",
+        "stream": true
+      }
+    ]
+  },
+  "entity.ashen_crawler.death": {
+    "category": "entity",
+    "subtitle": "Ashen Crawler Dies",
+    "sounds": [
+      {
+        "name": "preternaturalism:entity/entity.ashen_crawler.death",
+        "stream": true
+      }
+    ]
+  },
+  "block.searrage.ambient": {
+    "category": "block",
+    "subtitle": "Searrage Burns",
+    "sounds": [
+      {
+        "name": "preternaturalism:block/block.searrage.ambient",
+        "stream": true
+      }
+    ]
+  },
+  "block.searrigen.ambient": {
+    "category": "block",
+    "subtitle": "Searrigen Burns",
+    "sounds": [
+      {
+        "name": "preternaturalism:block/block.searrigen.ambient",
+        "stream": true
+      }
+    ]
+  }
+}
