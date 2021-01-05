@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,fluid_type=none": { "model": "preternaturalism:block/fluid_scanner_none" },
+    "facing=south,fluid_type=none": { "model": "preternaturalism:block/fluid_scanner_none",  "y": 180},
+    "facing=west,fluid_type=none": { "model": "preternaturalism:block/fluid_scanner_none",  "y": 270},
+    "facing=east,fluid_type=none": { "model": "preternaturalism:block/fluid_scanner_none",  "y": 90},
+    "facing=north,fluid_type=water": { "model": "preternaturalism:block/fluid_scanner_water" },
+    "facing=south,fluid_type=water": { "model": "preternaturalism:block/fluid_scanner_water",  "y": 180},
+    "facing=west,fluid_type=water": { "model": "preternaturalism:block/fluid_scanner_water",  "y": 270},
+    "facing=east,fluid_type=water": { "model": "preternaturalism:block/fluid_scanner_water",  "y": 90},
+    "facing=north,fluid_type=lava": { "model": "preternaturalism:block/fluid_scanner_lava" },
+    "facing=south,fluid_type=lava": { "model": "preternaturalism:block/fluid_scanner_lava",  "y": 180},
+    "facing=west,fluid_type=lava": { "model": "preternaturalism:block/fluid_scanner_lava",  "y": 270},
+    "facing=east,fluid_type=lava": { "model": "preternaturalism:block/fluid_scanner_lava",  "y": 90},
+    "facing=north,fluid_type=contaminated_water": { "model": "preternaturalism:block/fluid_scanner_contaminated_water" },
+    "facing=south,fluid_type=contaminated_water": { "model": "preternaturalism:block/fluid_scanner_contaminated_water",  "y": 180},
+    "facing=west,fluid_type=contaminated_water": { "model": "preternaturalism:block/fluid_scanner_contaminated_water",  "y": 270},
+    "facing=east,fluid_type=contaminated_water": { "model": "preternaturalism:block/fluid_scanner_contaminated_water",  "y": 90},
+    "facing=north,fluid_type=sulfur_gas": { "model": "preternaturalism:block/fluid_scanner_sulfur_gas" },
+    "facing=south,fluid_type=sulfur_gas": { "model": "preternaturalism:block/fluid_scanner_sulfur_gas",  "y": 180},
+    "facing=west,fluid_type=sulfur_gas": { "model": "preternaturalism:block/fluid_scanner_sulfur_gas",  "y": 270},
+    "facing=east,fluid_type=sulfur_gas": { "model": "preternaturalism:block/fluid_scanner_sulfur_gas",  "y": 90},
+    "facing=north,fluid_type=sulfur_liquid": { "model": "preternaturalism:block/fluid_scanner_sulfur_liquid" },
+    "facing=south,fluid_type=sulfur_liquid": { "model": "preternaturalism:block/fluid_scanner_sulfur_liquid",  "y": 180},
+    "facing=west,fluid_type=sulfur_liquid": { "model": "preternaturalism:block/fluid_scanner_sulfur_liquid",  "y": 270},
+    "facing=east,fluid_type=sulfur_liquid": { "model": "preternaturalism:block/fluid_scanner_sulfur_liquid",  "y": 90}
+  }
+}

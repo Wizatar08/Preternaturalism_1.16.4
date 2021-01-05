@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "preternaturalism:block/explosive_mine" },
+    "facing=south": { "model": "preternaturalism:block/explosive_mine",  "y": 180},
+    "facing=west": { "model": "preternaturalism:block/explosive_mine",  "y": 270},
+    "facing=east": { "model": "preternaturalism:block/explosive_mine",  "y": 90}
+  }
+}

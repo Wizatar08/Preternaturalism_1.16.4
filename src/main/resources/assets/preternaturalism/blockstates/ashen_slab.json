@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "preternaturalism:block/ashen_slab" },
+        "type=top": { "model": "preternaturalism:block/ashen_slab_top" },
+        "type=double": { "model": "preternaturalism:block/ashen_planks" }
+    }
+}

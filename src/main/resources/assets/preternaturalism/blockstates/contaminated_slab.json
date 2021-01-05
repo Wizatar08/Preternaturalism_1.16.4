@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "preternaturalism:block/contaminated_slab" },
+        "type=top": { "model": "preternaturalism:block/contaminated_slab_top" },
+        "type=double": { "model": "preternaturalism:block/contaminated_planks" }
+    }
+}

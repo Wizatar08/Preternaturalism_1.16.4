@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model":  "preternaturalism:block/contaminated_log"},
+    "axis=z": {"model":  "preternaturalism:block/contaminated_log", "x":  90},
+    "axis=x": {"model":  "preternaturalism:block/contaminated_log", "x":  90, "y":  90}
+  }
+}

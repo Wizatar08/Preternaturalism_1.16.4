@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "preternaturalism:block/lightning_block" },
+    "facing=south": { "model": "preternaturalism:block/lightning_block",  "y": 180},
+    "facing=west": { "model": "preternaturalism:block/lightning_block",  "y": 270},
+    "facing=east": { "model": "preternaturalism:block/lightning_block",  "y": 90}
+  }
+}

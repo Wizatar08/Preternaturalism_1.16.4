@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "preternaturalism:block/luminescent_pressure_plate" },
+    "powered=true": { "model": "preternaturalism:block/luminescent_pressure_plate_down" }
+  }
+}

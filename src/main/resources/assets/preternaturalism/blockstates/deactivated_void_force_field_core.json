@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "preternaturalism:block/deactivated_void_force_field_core" },
+    "facing=south": { "model": "preternaturalism:block/deactivated_void_force_field_core",  "y": 180},
+    "facing=west": { "model": "preternaturalism:block/deactivated_void_force_field_core",  "y": 270},
+    "facing=east": { "model": "preternaturalism:block/deactivated_void_force_field_core",  "y": 90}
+  }
+}
