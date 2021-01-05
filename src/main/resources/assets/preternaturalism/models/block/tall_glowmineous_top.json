@@ -1,0 +1,6 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "preternaturalism:blocks/tall_glowmineous_top"
+  }
+}

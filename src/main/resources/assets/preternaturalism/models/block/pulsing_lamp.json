@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "preternaturalism:blocks/pulsing_lamp"
+    }
+}
