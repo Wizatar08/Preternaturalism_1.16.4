@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "preternaturalism:blocks/ashen_sapling"
+    }
+}

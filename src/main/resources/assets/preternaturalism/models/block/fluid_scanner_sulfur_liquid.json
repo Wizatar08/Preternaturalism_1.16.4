@@ -1,0 +1,92 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "preternaturalism:blocks/fluid_scanner_bottom_bottom",
+		"1": "preternaturalism:blocks/fluid_scanner_bottom_side",
+		"2": "preternaturalism:blocks/fluid_scanner_middle_bottom",
+		"3": "preternaturalism:blocks/fluid_scanner_middle_side_sulfur_liquid",
+		"4": "preternaturalism:blocks/fluid_scanner_middle_top",
+		"5": "preternaturalism:blocks/fluid_scanner_top_side",
+		"6": "preternaturalism:blocks/fluid_scanner_top_top",
+		"particle": "preternaturalism:blocks/fluid_scanner_bottom_side"
+	},
+	"elements": [
+		{
+			"name": "bottomCube",
+			"from": [6, 15, 6],
+			"to": [10, 16, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 2], "texture": "#5"},
+				"east": {"uv": [0, 0, 4, 2], "texture": "#5"},
+				"south": {"uv": [0, 0, 4, 2], "texture": "#5"},
+				"west": {"uv": [0, 0, 4, 2], "texture": "#5"},
+				"up": {"uv": [0, 0, 4, 4], "texture": "#6"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#missing"}
+			}
+		},
+		{
+			"name": "middleCube",
+			"from": [3, 8, 3],
+			"to": [13, 15, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 10, 7], "texture": "#3"},
+				"east": {"uv": [0, 0, 10, 7], "texture": "#3"},
+				"south": {"uv": [0, 0, 10, 7], "texture": "#3"},
+				"west": {"uv": [0, 0, 10, 7], "texture": "#3"},
+				"up": {"uv": [0, 0, 10, 10], "texture": "#4"},
+				"down": {"uv": [0, 0, 10, 10], "texture": "#2"}
+			}
+		},
+		{
+			"name": "topCube",
+			"from": [6, -5, 6],
+			"to": [10, 8, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 8], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 8], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 8], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 8], "texture": "#1"},
+				"up": {"uv": [0, 0, 4, 4], "texture": "#missing"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.375, 0.375, 0.375]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 225, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [30, 225, 0],
+			"scale": [0.625, 0.625, 0.625]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2]
+		}
+	]
+}

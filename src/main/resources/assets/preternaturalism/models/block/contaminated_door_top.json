@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "preternaturalism:blocks/contaminated_door_bottom",
+    "top": "preternaturalism:blocks/contaminated_door_top"
+  }
+}

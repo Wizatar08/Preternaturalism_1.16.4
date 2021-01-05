@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "preternaturalism:blocks/container_handler_side",
+    "down": "preternaturalism:blocks/container_handler_bottom",
+    "up": "preternaturalism:blocks/container_handler_top",
+    "north": "preternaturalism:blocks/container_handler_side",
+    "east": "preternaturalism:blocks/container_handler_side",
+    "south": "preternaturalism:blocks/container_handler_side",
+    "west": "preternaturalism:blocks/container_handler_side"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "preternaturalism:blocks/ashen_planks",
+    "top": "preternaturalism:blocks/ashen_planks",
+    "side": "preternaturalism:blocks/ashen_planks"
+  }
+}

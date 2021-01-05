@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom",
+  "textures": {
+    "bottom": "preternaturalism:blocks/ashen_door_bottom",
+    "top": "preternaturalism:blocks/ashen_door_top"
+  }
+}

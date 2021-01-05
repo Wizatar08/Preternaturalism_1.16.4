@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "preternaturalism:blocks/contaminated_log",
+        "side": "preternaturalism:blocks/contaminated_log_side"
+    }
+}
