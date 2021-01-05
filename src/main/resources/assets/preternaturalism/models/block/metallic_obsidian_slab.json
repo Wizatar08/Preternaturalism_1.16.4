@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "preternaturalism:blocks/metallic_obsidian",
+    "top": "preternaturalism:blocks/metallic_obsidian",
+    "side": "preternaturalism:blocks/metallic_obsidian"
+  }
+}

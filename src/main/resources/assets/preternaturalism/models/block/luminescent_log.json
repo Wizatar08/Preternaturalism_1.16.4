@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "preternaturalism:blocks/luminescent_log_top",
+        "side": "preternaturalism:blocks/luminescent_log"
+    }
+}

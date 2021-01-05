@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "preternaturalism:blocks/polished_metallic_obsidian",
+    "top": "preternaturalism:blocks/polished_metallic_obsidian",
+    "side": "preternaturalism:blocks/polished_metallic_obsidian"
+  }
+}

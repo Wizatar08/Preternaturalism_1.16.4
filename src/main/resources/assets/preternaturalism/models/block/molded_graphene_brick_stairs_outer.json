@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "preternaturalism:blocks/molded_graphene_bricks",
+    "top": "preternaturalism:blocks/molded_graphene_bricks",
+    "side": "preternaturalism:blocks/molded_graphene_bricks"
+  }
+}

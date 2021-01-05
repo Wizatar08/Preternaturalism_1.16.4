@@ -1,0 +1,8 @@
+{
+    "parent": "block/slab_top",
+    "textures": {
+        "bottom": "preternaturalism:blocks/luminescent_planks",
+        "top": "preternaturalism:blocks/luminescent_planks",
+        "side": "preternaturalism:blocks/luminescent_planks"
+    }
+}

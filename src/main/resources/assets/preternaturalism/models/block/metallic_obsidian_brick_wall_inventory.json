@@ -1,0 +1,6 @@
+{
+    "parent": "block/wall_inventory",
+    "textures": {
+        "wall": "preternaturalism:blocks/metallic_obsidian_bricks"
+    }
+}
