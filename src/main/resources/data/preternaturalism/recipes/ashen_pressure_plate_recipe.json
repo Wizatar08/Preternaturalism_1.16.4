@@ -1,0 +1,13 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:ashen_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:ashen_pressure_plate"
+    }
+}

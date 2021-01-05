@@ -1,0 +1,16 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PP",
+        "PP",
+        "PP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:contaminated_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:contaminated_door",
+        "count": 3
+    }
+}

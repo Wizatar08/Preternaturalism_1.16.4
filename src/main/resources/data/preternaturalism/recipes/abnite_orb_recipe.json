@@ -1,0 +1,16 @@
+{
+    "type":"minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "preternaturalism:unstable_abnite_orb"
+        },
+        {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        },
+        {
+            "item": "preternaturalism:ion_charge"
+        }
+    ], "result":{
+        "item": "preternaturalism:abnite_orb"
+    }
+}

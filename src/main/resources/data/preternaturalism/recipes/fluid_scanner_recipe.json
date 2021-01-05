@@ -1,0 +1,22 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "RGR",
+        "IGI",
+        " R "
+    ],
+    "key": {
+        "R": {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        },
+        "G": {
+            "item": "minecraft:glass"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        }
+    }, "result":{
+        "item": "preternaturalism:fluid_scanner",
+        "count": 1
+    }
+}

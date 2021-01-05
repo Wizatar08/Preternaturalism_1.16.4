@@ -1,0 +1,18 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "OI",
+        "IO"
+    ],
+    "key": {
+        "I": {
+            "item": "minecraft:iron_ingot"
+        },
+        "O": {
+            "item": "minecraft:obsidian"
+        }
+    }, "result":{
+        "item": "preternaturalism:metallic_obsidian_ingot",
+        "count": 2
+    }
+}

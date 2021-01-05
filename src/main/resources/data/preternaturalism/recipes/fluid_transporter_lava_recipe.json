@@ -1,0 +1,19 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        " O ",
+        "OBO",
+        " O "
+    ],
+    "key": {
+        "O": {
+            "item": "minecraft:obsidian"
+        },
+        "B": {
+            "item": "minecraft:bucket"
+        }
+    }, "result":{
+        "item": "preternaturalism:fluid_transporter_lava",
+        "count": 1
+    }
+}

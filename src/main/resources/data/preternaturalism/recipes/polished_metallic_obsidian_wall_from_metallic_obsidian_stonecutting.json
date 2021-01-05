@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "preternaturalism:metallic_obsidian"
+  },
+  "result": "preternaturalism:polished_metallic_obsidian_wall",
+  "count": 1
+}

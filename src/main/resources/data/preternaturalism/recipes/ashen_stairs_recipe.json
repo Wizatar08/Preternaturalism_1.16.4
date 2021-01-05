@@ -1,0 +1,16 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "P  ",
+        "PP ",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:ashen_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:ashen_stairs",
+        "count": 4
+    }
+}

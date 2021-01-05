@@ -1,0 +1,13 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "OO"
+    ],
+    "key": {
+        "O": {
+            "item": "preternaturalism:metallic_obsidian"
+        }
+    }, "result":{
+        "item": "preternaturalism:metallic_obsidian_pressure_plate"
+    }
+}

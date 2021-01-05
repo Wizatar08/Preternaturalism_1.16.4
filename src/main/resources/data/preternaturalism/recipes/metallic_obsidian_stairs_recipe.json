@@ -1,0 +1,16 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "O  ",
+        "OO ",
+        "OOO"
+    ],
+    "key": {
+        "O": {
+            "item": "preternaturalism:metallic_obsidian"
+        }
+    }, "result":{
+        "item": "preternaturalism:metallic_obsidian_stairs",
+        "count": 4
+    }
+}

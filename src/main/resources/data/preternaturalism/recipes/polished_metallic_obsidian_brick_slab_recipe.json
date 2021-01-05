@@ -1,0 +1,14 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "OOO"
+    ],
+    "key": {
+        "O": {
+            "item": "preternaturalism:polished_metallic_obsidian_bricks"
+        }
+    }, "result":{
+        "item": "preternaturalism:polished_metallic_obsidian_brick_slab",
+        "count": 6
+    }
+}

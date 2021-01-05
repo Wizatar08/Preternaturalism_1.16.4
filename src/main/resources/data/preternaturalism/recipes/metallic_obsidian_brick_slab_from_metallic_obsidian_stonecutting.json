@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "preternaturalism:metallic_obsidian"
+  },
+  "result": "preternaturalism:metallic_obsidian_brick_slab",
+  "count": 2
+}

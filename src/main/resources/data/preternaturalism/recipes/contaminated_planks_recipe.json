@@ -1,0 +1,11 @@
+{
+    "type":"minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "preternaturalism:contaminated_log"
+        }
+    ], "result":{
+        "item": "preternaturalism:contaminated_planks",
+        "count": 4
+    }
+}

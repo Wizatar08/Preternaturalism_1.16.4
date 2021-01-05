@@ -1,0 +1,18 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PSP",
+        "PSP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:luminescent_planks"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    }, "result":{
+        "item": "preternaturalism:luminescent_fence",
+        "count": 3
+    }
+}

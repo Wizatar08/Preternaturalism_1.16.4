@@ -1,0 +1,14 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "I"
+    ],
+    "key": {
+        "I": {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        }
+    }, "result":{
+        "item": "minecraft:iron_ingot",
+        "count": 5
+    }
+}

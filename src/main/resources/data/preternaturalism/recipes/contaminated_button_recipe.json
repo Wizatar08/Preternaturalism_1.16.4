@@ -1,0 +1,13 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "P"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:contaminated_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:contaminated_button"
+    }
+}

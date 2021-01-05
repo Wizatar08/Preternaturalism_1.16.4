@@ -1,0 +1,14 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "S"
+    ],
+    "key": {
+        "S": {
+            "item": "preternaturalism:searrigen"
+        }
+    }, "result":{
+        "item": "preternaturalism:searrage",
+        "count": 9
+    }
+}

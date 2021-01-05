@@ -1,0 +1,25 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "RBR",
+        "MIM",
+        "RBR"
+    ],
+    "key": {
+        "R": {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        },
+        "M": {
+            "item": "preternaturalism:metallic_obsidian_ingot"
+        },
+        "B": {
+            "item": "preternaturalism:metallic_obsidian"
+        },
+        "I": {
+            "item": "minecraft:iron_block"
+        }
+    }, "result":{
+        "item": "preternaturalism:container_handler",
+        "count": 1
+    }
+}

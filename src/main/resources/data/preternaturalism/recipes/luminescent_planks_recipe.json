@@ -1,0 +1,11 @@
+{
+    "type":"minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "preternaturalism:luminescent_log"
+        }
+    ], "result":{
+        "item": "preternaturalism:luminescent_planks",
+        "count": 4
+    }
+}

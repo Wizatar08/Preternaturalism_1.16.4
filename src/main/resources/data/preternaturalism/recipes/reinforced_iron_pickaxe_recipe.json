@@ -1,0 +1,19 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "III",
+        " S ",
+        " S "
+    ],
+    "key": {
+        "I": {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    }, "result":{
+        "item": "preternaturalism:reinforced_iron_pickaxe",
+        "count": 1
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "O"
+    ],
+    "key": {
+        "O": {
+            "item": "preternaturalism:polished_metallic_obsidian"
+        }
+    }, "result":{
+        "item": "preternaturalism:polished_metallic_obsidian_button"
+    }
+}

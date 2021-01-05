@@ -1,0 +1,18 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PSP",
+        "PSP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:contaminated_planks"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    }, "result":{
+        "item": "preternaturalism:contaminated_fence",
+        "count": 3
+    }
+}

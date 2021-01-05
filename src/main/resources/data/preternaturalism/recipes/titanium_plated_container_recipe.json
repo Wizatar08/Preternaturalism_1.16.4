@@ -1,0 +1,22 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "TRT",
+        "ITI",
+        "ITI"
+    ],
+    "key": {
+        "T": {
+            "item": "preternaturalism:titanium_ingot"
+        },
+        "R": {
+            "item": "preternaturalism:reinforced_iron_ingot"
+        },
+        "I": {
+            "item": "minecraft:iron_ingot"
+        }
+    }, "result":{
+        "item": "preternaturalism:titanium_plated_container",
+        "count": 1
+    }
+}

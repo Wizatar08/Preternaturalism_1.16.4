@@ -1,0 +1,18 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "SPS",
+        "SPS"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:ashen_planks"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    }, "result":{
+        "item": "preternaturalism:ashen_fence_gate",
+        "count": 1
+    }
+}
