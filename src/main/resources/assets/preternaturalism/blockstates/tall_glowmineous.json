@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "preternaturalism:block/tall_glowmineous_bottom" },
+    "half=upper":    { "model": "preternaturalism:block/tall_glowmineous_top" }
+  }
+}
