@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "preternaturalism:items/titanium_sword"
+  }
+}
