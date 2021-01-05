@@ -1,0 +1,13 @@
+{
+  "type": "preternaturalism:preternatural_places_dim_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "seed": -425696429,
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "seed": -425696429,
+      "biome": "preternaturalism:contaminated_plains"
+    },
+    "settings": "preternaturalism:dimension_settings"
+  }
+}

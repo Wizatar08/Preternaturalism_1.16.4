@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "preternaturalism:metallic_obsidian_wall",
+    "preternaturalism:polished_metallic_obsidian_wall",
+    "preternaturalism:metallic_obsidian_brick_wall",
+    "preternaturalism:polished_metallic_obsidian_brick_wall",
+    "preternaturalism:molded_graphene_wall",
+    "preternaturalism:molded_graphene_brick_wall"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "surface_builder": "preternaturalism:contaminated_plains_surface_builder",
+  "depth": 0.125,
+  "scale": 0,
+  "temperature": 1,
+  "downfall": 0,
+  "precipitation": "none",
+  "temperature_modifier": "none",
+  "category": "plains",
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.5,
+  "effects": {
+    "sky_color": 6408,
+    "fog_color": 133632,
+    "water_color": 0,
+    "water_fog_color": 0,
+    "grass_color": 8224125,
+    "foliage_color": 9408399,
+    "grass_color_modifier": "none"
+  },
+  "starts": [],
+  "spawners": {
+    "monster": [
+      {
+        "type": "preternaturalism:mutated_spider",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "liquid": [
+      "minecraft:cave"
+    ]
+  },
+  "features": [
+    [
+      "preternaturalism:contaminated_plains_foliage_features"
+    ]
+  ]
+}
