@@ -22,10 +22,8 @@ public class walkOnRadioactiveBlock {
         LivingEntity livingEntity = event.getEntityLiving();
         World world = livingEntity.getEntityWorld();
         if ((world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_SOIL.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_STONE.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_OBSIDIAN.get().getDefaultState())) {
-            if(livingEntity.world.getGameRules().getBoolean(Preternaturalism.contaminatedBlocksEffects)) {
-                if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get()) {
-                    livingEntity.attackEntityFrom(ModDamageSource.CONTAMINATED_BLOCK, 5.0F);
-                }
+            if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get()) {
+                livingEntity.attackEntityFrom(ModDamageSource.CONTAMINATED_BLOCK, 5.0F);
             }
         }
     }
