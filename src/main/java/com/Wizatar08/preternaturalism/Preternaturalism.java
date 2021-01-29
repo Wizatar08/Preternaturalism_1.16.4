@@ -44,7 +44,6 @@ public class Preternaturalism {
     public static final String MOD_ID = "preternaturalism";
     public static Preternaturalism instance;
     public static final ResourceLocation PRETERNATURAL_PLACES_DIM_TYPE = new ResourceLocation(MOD_ID, "preternatural_places");
-    public static GameRules.RuleKey<GameRules.BooleanValue> contaminatedBlocksEffects;
 
     public Preternaturalism() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -81,31 +80,6 @@ public class Preternaturalism {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        try{
-            Method createBoolean = ObfuscationReflectionHelper.findMethod(GameRules.BooleanValue.class, "create",boolean.class);
-            createBoolean.setAccessible(true);
-            DeferredWorkQueue.runLater( () ->
-            {
-                try
-                {
-                    Object boolTrue = createBoolean.invoke(GameRules.BooleanValue.class, true);
-                    contaminatedBlocksEffects = GameRules.register("contaminatedBlocksEffects", GameRules.Category.PLAYER,  (GameRules.RuleType<GameRules.BooleanValue>) boolTrue);
-                }
-                catch (IllegalAccessException e) {
-                    LOGGER.error("Illegal Access Exception!");
-                    e.printStackTrace();
-                }
-                catch (InvocationTargetException e) {
-                    LOGGER.error("Invocation Target Exception!");
-                    e.printStackTrace();
-                }
-            });
-        }
-        catch (IllegalArgumentException e) {
-            LOGGER.error("Illegal Argument Exception!");
-            e.printStackTrace();
-            throw e;
-        }
     }
 
     @SubscribeEvent
