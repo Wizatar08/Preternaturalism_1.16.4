@@ -7,7 +7,7 @@
             "features": [
               {
                 "feature": "preternaturalism:contaminated_tree_basic",
-                "chance": 0.3
+                "chance": 0.25
               },
               {
                 "feature": "preternaturalism:contaminated_tree_basic_fancy",
@@ -24,6 +24,10 @@
               {
                 "feature": "preternaturalism:contaminated_bush_1",
                 "chance": 0.2
+              },
+              {
+                "feature": "preternaturalism:contaminated_tree_giant",
+                "chance": 0.05
               }
             ],
             "default": "preternaturalism:contaminated_tree_basic_short"
@@ -48,9 +52,9 @@
     },
     "decorator": {
       "config": {
-        "count": 0,
+        "count": 16,
         "extra_chance": 0.5,
-        "extra_count": 2
+        "extra_count": 8
       },
       "type": "minecraft:count_extra"
     }

@@ -3,7 +3,7 @@
   "config": {
     "max_water_depth": 0,
     "ignore_vines": false,
-    "heightmap": "MOTION_BLOCKING_NO_LEAVES",
+    "heightmap": "WORLD_SURFACE_WG",
     "minimum_size": {
       "limit": 0,
       "lower_size": 0,
@@ -31,8 +31,8 @@
       "type": "minecraft:simple_state_provider"
     },
     "foliage_placer": {
-      "radius": 2,
-      "offset": 1,
+      "radius": 1,
+      "offset": 2,
       "height": 2,
       "type": "minecraft:bush_foliage_placer"
     },
