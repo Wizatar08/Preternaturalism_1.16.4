@@ -22,13 +22,11 @@ public class ExplosiveAbniteOrb extends Item {
 
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
-        worldIn.playSound((PlayerEntity)null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ENTITY_EGG_THROW, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
+        worldIn.playSound(null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ENTITY_EGG_THROW, SoundCategory.PLAYERS, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
         if (!worldIn.isRemote) {
             ExplosiveAbniteOrbEntity eaoe = new ExplosiveAbniteOrbEntity(worldIn, playerIn);
             eaoe.setItem(itemstack);
-            eaoe.setHeadRotation(playerIn.rotationYaw, Math.round(playerIn.rotationPitch));
-            eaoe.shoot(playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), 1.5F, 0.0F);
-            //eaoe.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 0.0F);
+            eaoe.func_234612_a_(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.75F, 2.0F);
             worldIn.addEntity(eaoe);
         }
 
