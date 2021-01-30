@@ -26,25 +26,18 @@ public class BreakBlockEvent {
     @SubscribeEvent
     public static void BreakBlockEvent(BreakEvent event) {
         LivingEntity livingEntity = event.getPlayer();
-        PlayerEntity player = event.getPlayer();
-        World world = livingEntity.getEntityWorld();
-        double x = livingEntity.getLookVec().getX();
-        double y = livingEntity.getLookVec().getY();
-        double z = livingEntity.getLookVec().getZ();
-        BlockRayTraceResult rayTraceResult = getTargetBlockResult(player, world, 10);
-        if (rayTraceResult != null) {
-            new BlockPos(rayTraceResult.getHitVec().getX(), rayTraceResult.getHitVec().getY(), rayTraceResult.getHitVec().getZ());
-        }
+        BlockPos pos = event.getPos();
+        double x = pos.getX();
+        double y = pos.getY();
+        double z = pos.getZ();
 
         /*
         BREAK BLOCK:
          */
-
-        Preternaturalism.LOGGER.info("Break");
-        if((world.getBlockState(rayTraceResult.getPos()).getBlock()) == BlockInit.URANIUM_ORE.get()){
-            livingEntity.getEntityWorld().createExplosion(null, x, y, z, 7.5f, Explosion.Mode.BREAK);
+        if(event.getWorld().getBlockState(pos) == BlockInit.URANIUM_ORE.get().getDefaultState()){
+            livingEntity.getEntityWorld().createExplosion(event.getPlayer(), x, y, z, 7.5f, Explosion.Mode.BREAK);
         }
-        if(((world.getBlockState(rayTraceResult.getPos()).getBlock()) == BlockInit.PECULIAR_STONE.get()) || ((world.getBlockState(rayTraceResult.getPos()).getBlock()) == BlockInit.ASHEN_PECULIAR_STONE.get())){
+        if((event.getWorld().getBlockState(pos) == BlockInit.PECULIAR_STONE.get().getDefaultState()) || (event.getWorld().getBlockState(pos) == BlockInit.ASHEN_PECULIAR_STONE.get().getDefaultState())){
             int rand = (int) Math.floor(Math.random() * 30);
             if(rand == 0){
                 livingEntity.addPotionEffect(new EffectInstance(Effects.BLINDNESS,100,0));
@@ -110,41 +103,4 @@ public class BreakBlockEvent {
         }
     }
 
-
-
-    // RAY TRACE
-    public static BlockRayTraceResult getTargetBlockResult(PlayerEntity player, World world, int maxdistance) {
-        Vector3d vec = player.func_241205_ce_();
-        Vector3d vec3 = new Vector3d(vec.x, vec.y + player.getEyeHeight(), vec.z);
-        Vector3d vec3a = player.getLook(1.0F);
-        Vector3d vec3b = vec3.add(vec3a.getX() * maxdistance, vec3a.getY() * maxdistance, vec3a.getZ() * maxdistance);
-        BlockRayTraceResult rayTraceResult = world.rayTraceBlocks(new RayTraceContext(vec3, vec3b, RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.ANY, player));
-
-        if (rayTraceResult != null) {
-            double xm = rayTraceResult.getHitVec().getX();
-            double ym = rayTraceResult.getHitVec().getY();
-            double zm = rayTraceResult.getHitVec().getZ();
-
-            if (rayTraceResult.getFace() == Direction.SOUTH) {
-                zm--;
-            }
-            if (rayTraceResult.getFace() == Direction.EAST) {
-                xm--;
-            }
-            if (rayTraceResult.getFace() == Direction.UP) {
-                ym--;
-            }
-
-            return new BlockRayTraceResult(rayTraceResult.getHitVec(), rayTraceResult.getFace(), new BlockPos(xm, ym, zm), false);
-        }
-        return null;
-    }
 }
-
-// Events:
-//      BreakEvent - Break a block
-//
-// Give player an effect: livinglivingEntity.addPotionEffect(new EffectInstance(Effects.<Effect>,<Duration>,<Amplifier>))
-// Set a block: World world = livingEntity.getEntityWorld()
-//       world.setBlockState(livingEntity.getPosition().add(<x>,<y>,<z>), blockInit.<Block>.getDefaultState())
-//
