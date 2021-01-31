@@ -21,9 +21,10 @@ public class walkOnRadioactiveBlock {
     public static void walkOnRadioactiveBlock(LivingEvent.LivingUpdateEvent event){
         LivingEntity livingEntity = event.getEntityLiving();
         World world = livingEntity.getEntityWorld();
-        if ((world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_SOIL.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_STONE.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_OBSIDIAN.get().getDefaultState())) {
+        if ((world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_SOIL.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_STONE.get().getDefaultState()) || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_OBSIDIAN.get().getDefaultState())
+        || (world.getBlockState(livingEntity.getPosition().add(0, -1, 0)) == BlockInit.CONTAMINATED_LOG.get().getDefaultState())) {
             if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get()) {
-                livingEntity.attackEntityFrom(ModDamageSource.CONTAMINATED_BLOCK, 5.0F);
+                livingEntity.attackEntityFrom(ModDamageSource.CONTAMINATED_BLOCK, 8.5F);
             }
         }
     }
