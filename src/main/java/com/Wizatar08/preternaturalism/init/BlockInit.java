@@ -226,6 +226,7 @@ public class BlockInit {
     // CONTAMINATED
     public static final RegistryObject<Block> SICKLY_SPROUTS = BLOCKS.register("sickly_sprouts", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
     public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_SHRUB = BLOCKS.register("intertwined_contaminated_shrub", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.7f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_BUSH = BLOCKS.register("intertwined_contaminated_bush", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.95f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_ROOTS = BLOCKS.register("intertwined_contaminated_roots", () -> new DoublePlantBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(1.2f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
 
     // CRYSTALLINE
