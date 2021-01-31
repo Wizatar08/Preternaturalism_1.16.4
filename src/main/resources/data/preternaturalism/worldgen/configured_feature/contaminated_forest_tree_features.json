@@ -1,0 +1,55 @@
+{
+  "config": {
+    "feature": {
+      "config": {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": "preternaturalism:_contaminated_tree_basic",
+                "chance": 0.45
+              },
+              {
+                "feature": "preternaturalism:_contaminated_tree_basic_fancy",
+                "chance": 0.2
+              },
+              {
+                "feature": "preternaturalism:_contaminated_tree_tall",
+                "chance": 0.3
+              },
+              {
+                "feature": "preternaturalism:_contaminated_tree_giant",
+                "chance": 0.05
+              }
+            ],
+            "default": "preternaturalism:_contaminated_tree_basic_short"
+          },
+          "type": "minecraft:random_selector"
+        },
+        "decorator": {
+          "config": {
+            "outer": {
+              "config": {},
+              "type": "minecraft:square"
+            },
+            "inner": {
+              "config": {},
+              "type": "minecraft:heightmap"
+            }
+          },
+          "type": "minecraft:decorated"
+        }
+      },
+      "type": "minecraft:decorated"
+    },
+    "decorator": {
+      "config": {
+        "count": 12,
+        "extra_chance": 0.5,
+        "extra_count": 4
+      },
+      "type": "minecraft:count_extra"
+    }
+  },
+  "type": "minecraft:decorated"
+}
