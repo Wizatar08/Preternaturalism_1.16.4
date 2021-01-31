@@ -1,0 +1,47 @@
+{
+  "config": {
+    "feature": {
+      "config": {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": "preternaturalism:_intertwined_contaminated_shrub_forest_patch",
+                "chance": 0.7
+              },
+              {
+                "feature": "preternaturalism:_intertwined_contaminated_roots_forest_patch",
+                "chance": 0.3
+              }
+            ],
+            "default": "preternaturalism:_intertwined_contaminated_shrub_forest_patch"
+          },
+          "type": "minecraft:random_selector"
+        },
+        "decorator": {
+          "config": {
+            "outer": {
+              "config": {},
+              "type": "minecraft:square"
+            },
+            "inner": {
+              "config": {},
+              "type": "minecraft:heightmap"
+            }
+          },
+          "type": "minecraft:decorated"
+        }
+      },
+      "type": "minecraft:decorated"
+    },
+    "decorator": {
+      "config": {
+        "count": 32,
+        "extra_chance": 0.5,
+        "extra_count": 8
+      },
+      "type": "minecraft:count_extra"
+    }
+  },
+  "type": "minecraft:decorated"
+}
