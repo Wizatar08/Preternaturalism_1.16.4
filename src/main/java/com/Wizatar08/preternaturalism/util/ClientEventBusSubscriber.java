@@ -60,6 +60,10 @@ public class ClientEventBusSubscriber implements IClientPlayNetHandler {
         RenderTypeLookup.setRenderLayer(BlockInit.GLOWMINEOUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.TALL_GLOWMINEOUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.ITEM_CHAMBER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.SICKLY_SPROUTS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_ROOTS.get(), RenderType.getCutout());
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.ASHEN_CRAWLER.get(), AshenCrawlerEntityRender::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GLOWING_HOVERDUST.get(), GlowingHoverdustEntityRender::new);
