@@ -7,11 +7,15 @@
             "features": [
               {
                 "feature": "preternaturalism:_intertwined_contaminated_shrub_forest_patch",
-                "chance": 0.7
+                "chance": 0.5
+              },
+              {
+                "feature": "preternaturalism:_intertwined_contaminated_bush_forest_patch",
+                "chance": 0.25
               },
               {
                 "feature": "preternaturalism:_intertwined_contaminated_roots_forest_patch",
-                "chance": 0.3
+                "chance": 0.25
               }
             ],
             "default": "preternaturalism:_intertwined_contaminated_shrub_forest_patch"
