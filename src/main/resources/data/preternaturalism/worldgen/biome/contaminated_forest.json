@@ -37,7 +37,17 @@
   },
   "features": [
     [
-      "preternaturalism:contaminated_forest_foliage_features"
+      "preternaturalism:contaminated_forest_tree_features",
+      "preternaturalism:contaminated_forest_bush_features"
+    ],
+    [
+      "preternaturalism:contaminated_forest_intertwined_plant_features"
+    ],
+    [
+      "preternaturalism:contaminated_biomes_sickly_sprouts_patch"
+    ],
+    [
+      "minecraft:patch_dead_bush"
     ]
   ]
 }
