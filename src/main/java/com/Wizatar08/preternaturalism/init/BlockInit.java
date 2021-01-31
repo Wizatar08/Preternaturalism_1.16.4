@@ -24,6 +24,7 @@ public class BlockInit {
             .sound(SoundType.GROUND)
             .setRequiresTool()
             .harvestLevel(0)
+            .setAllowsSpawn((state, reader, pos, entity) -> entity == ModEntityTypes.MUTATED_SPIDER.get())
             .harvestTool(ToolType.SHOVEL)));
     public static final RegistryObject<Block> CONTAMINATED_OBSIDIAN = BLOCKS.register("contaminated_obsidian", () -> new Block(Block.Properties.create(
             Material.ROCK)
@@ -221,6 +222,11 @@ public class BlockInit {
     public static final RegistryObject<Block> PURPLE_CRYSTAL_BLOCK = BLOCKS.register("purple_crystal_block", () -> new PurpleCrystalBlock(Block.Properties.from(Blocks.GLASS)));
     public static final RegistryObject<Block> WHITE_CRYSTAL_BLOCK = BLOCKS.register("white_crystal_block", () -> new WhiteCrystalBlock(Block.Properties.from(Blocks.GLASS)));
     public static final RegistryObject<Block> BLACK_CRYSTAL_BLOCK = BLOCKS.register("black_crystal_block", () -> new BlackCrystalBlock(Block.Properties.from(Blocks.GLASS)));
+
+    // CONTAMINATED
+    public static final RegistryObject<Block> SICKLY_SPROUTS = BLOCKS.register("sickly_sprouts", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_SHRUB = BLOCKS.register("intertwined_contaminated_shrub", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.7f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_ROOTS = BLOCKS.register("intertwined_contaminated_roots", () -> new DoublePlantBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(1.2f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
 
     // CRYSTALLINE
     public static final RegistryObject<Block> GLOWMINEOUS = BLOCKS.register("glowmineous", () -> new Glowmineous(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
