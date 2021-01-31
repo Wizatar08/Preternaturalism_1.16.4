@@ -3,6 +3,10 @@
     // Death Messages
     "death.attack.contamination": "%1$s ran onto a contaminated substance",
     "death.attack.contamination.player": "%1$s ran onto a contaminated substance whilst fighting %2$s",
+    "death.attack.intertwined_block": "%1$s got stuck in a dangerous plant",
+    "death.attack.intertwined_block.player": "%1$s fell on a dangerous plant whilst fighting %2$s",
+    "death.attack.intertwined_contaminated_block": "%1$s got stuck in a contaminated plant",
+    "death.attack.intertwined_contaminated_block.player": "%1$s fell on a contaminated plant whilst fighting %2$s",
 
     // Items
     "item.preternaturalism.uranium": "Uranium",
@@ -113,6 +117,9 @@
     "block.preternaturalism.glowing_quartz_block": "Glowing Quartz Block",
     "block.preternaturalism.contaminated_log": "Contaminated Log",
     "block.preternaturalism.shriveled_leaves": "Shriveled Leaves",
+    "block.preternaturalism.sickly_sprouts": "Sickly Sprouts",
+    "block.preternaturalism.intertwined_contaminated_shrub": "Intertwined Contaminated Shrub",
+    "block.preternaturalism.intertwined_contaminated_roots": "Intertwined Contaminated Roots",
     "block.preternaturalism.crystalline_soil": "Crystalline Soil",
     "block.preternaturalism.crystalline_grass_block": "Crystalline Grass Block",
     "block.preternaturalism.luminescent_log": "Luminescent Log",
@@ -199,8 +206,5 @@
     "container.preternaturalism.item_chamber": "Item Chamber",
 
     // Item Groups
-    "itemGroup.PreternaturalismTab": "Preternaturalism",
-
-    // Gamerules
-    "gamerule.contaminatedBlocksEffects": "Do contamination damage"
+    "itemGroup.PreternaturalismTab": "Preternaturalism"
 }
