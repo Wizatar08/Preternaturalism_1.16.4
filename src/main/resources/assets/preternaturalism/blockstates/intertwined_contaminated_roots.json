@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "preternaturalism:block/intertwined_contaminated_roots_bottom" },
+    "half=upper":    { "model": "preternaturalism:block/intertwined_contaminated_roots_top" }
+  }
+}
