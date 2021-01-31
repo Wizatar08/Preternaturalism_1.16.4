@@ -16,14 +16,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 @Mod.EventBusSubscriber(modid = Preternaturalism.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModDamageSource extends DamageSource{
 
-    public static final ModDamageSource CONTAMINATED_BLOCK = (ModDamageSource) (new ModDamageSource("contamination")).setDamageBypassesArmor().setDifficultyScaled();
+    public static final ModDamageSource CONTAMINATED_BLOCK = (ModDamageSource) (new ModDamageSource("contamination")).setDamageBypassesArmor().setDifficultyScaled().setDamageBypassesArmor();
+    public static final ModDamageSource INTERTWINED_BLOCK = (ModDamageSource) (new ModDamageSource("intertwined_block")).setDamageBypassesArmor().setDifficultyScaled();
+    public static final ModDamageSource INTERTWINED_CONTAMINATED_BLOCK = (ModDamageSource) (new ModDamageSource("intertwined_contaminated_block")).setDamageBypassesArmor().setDifficultyScaled();
 
     public ModDamageSource(String damageTypeIn) {
         super(damageTypeIn);
-    }
-
-    public static DamageSource causeContaminationDamage(PlayerEntity player) {
-        return new EntityDamageSource("contamination", player);
     }
 
     @Override
@@ -33,7 +31,6 @@ public class ModDamageSource extends DamageSource{
         if (livingentity != null) {
             s = s + ".player";
         }
-        Preternaturalism.LOGGER.info("DEATH MESSAGE: " + s + ", " + new TranslationTextComponent(s).getString());
         return livingentity != null ? new TranslationTextComponent(s, entityLivingBaseIn.getDisplayName(), livingentity.getDisplayName()) : new TranslationTextComponent(s, entityLivingBaseIn.getDisplayName());
     }
 }
