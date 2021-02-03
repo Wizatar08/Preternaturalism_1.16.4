@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "preternaturalism:ashen_dirt"
+    },
+    "under_material": {
+      "Name": "preternaturalism:ashen_peculiar_stone"
+    },
+    "underwater_material": {
+      "Name": "preternaturalism:ashen_peculiar_stone"
+    }
+  }
+}
