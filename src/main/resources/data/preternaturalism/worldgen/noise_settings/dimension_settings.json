@@ -1,7 +1,7 @@
 {
   "bedrock_roof_position": -10,
   "bedrock_floor_position": 0,
-  "sea_level": 48,
+  "sea_level": 64,
   "disable_mob_generation": false,
   "default_block": {
     "Name": "preternaturalism:peculiar_stone"
@@ -14,22 +14,22 @@
   },
   "noise": {
     "height": 256,
-    "density_factor": 0.3,
-    "density_offset": -0.1,
-    "size_horizontal": 4,
-    "size_vertical": 4,
+    "density_factor": 0.7,
+    "density_offset": -0.25,
+    "size_horizontal": 1,
+    "size_vertical": 2,
     "simplex_surface_noise": true,
     "random_density_offset": true,
     "island_noise_override": false,
     "amplified": false,
     "sampling": {
-      "xz_scale": 2,
-      "y_scale": 0.5,
-      "xz_factor": 80,
-      "y_factor": 160
+      "xz_scale": 1,
+      "y_scale": 1,
+      "xz_factor": 0.1,
+      "y_factor": 4000
     },
     "bottom_slide": {
-      "target": -40,
+      "target": 10,
       "size": 0,
       "offset": 0
     },
