@@ -223,13 +223,17 @@ public class BlockInit {
     public static final RegistryObject<Block> WHITE_CRYSTAL_BLOCK = BLOCKS.register("white_crystal_block", () -> new WhiteCrystalBlock(Block.Properties.from(Blocks.GLASS)));
     public static final RegistryObject<Block> BLACK_CRYSTAL_BLOCK = BLOCKS.register("black_crystal_block", () -> new BlackCrystalBlock(Block.Properties.from(Blocks.GLASS)));
 
-    // CONTAMINATED
+    // CONTAMINATED BIOME FEATURES
     public static final RegistryObject<Block> SICKLY_SPROUTS = BLOCKS.register("sickly_sprouts", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
     public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_SHRUB = BLOCKS.register("intertwined_contaminated_shrub", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.7f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_BUSH = BLOCKS.register("intertwined_contaminated_bush", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.95f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
     public static final RegistryObject<Block> INTERTWINED_CONTAMINATED_ROOTS = BLOCKS.register("intertwined_contaminated_roots", () -> new DoublePlantBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(1.2f, 0.5f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
+    // ASHEN BIOME FEATURES
+    public static final RegistryObject<Block> INTERTWINED_SHRUB = BLOCKS.register("intertwined_shrub", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.5f, 0.3f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> INTERTWINED_BUSH = BLOCKS.register("intertwined_bush", () -> new TallGrassBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0.7f, 0.3f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> INTERTWINED_ROOTS = BLOCKS.register("intertwined_roots", () -> new DoublePlantBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(1f, 0.3f).setRequiresTool().harvestTool(ToolType.HOE).sound(SoundType.WOOD)));
 
-    // CRYSTALLINE
+    // CRYSTALLINE BIOME FEATURES
     public static final RegistryObject<Block> GLOWMINEOUS = BLOCKS.register("glowmineous", () -> new Glowmineous(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
     public static final RegistryObject<Block> TALL_GLOWMINEOUS = BLOCKS.register("tall_glowmineous", () -> new DoublePlantBlock(Block.Properties.create(Material.TALL_PLANTS).doesNotBlockMovement().hardnessAndResistance(0f, 0f).sound(SoundType.PLANT)));
 
