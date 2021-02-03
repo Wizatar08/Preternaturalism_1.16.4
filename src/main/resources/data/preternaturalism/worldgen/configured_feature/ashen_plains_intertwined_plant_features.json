@@ -1,0 +1,51 @@
+{
+  "config": {
+    "feature": {
+      "config": {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": "preternaturalism:_intertwined_shrub_patch",
+                "chance": 0.4
+              },
+              {
+                "feature": "preternaturalism:_intertwined_bush_patch",
+                "chance": 0.3
+              },
+              {
+                "feature": "preternaturalism:_intertwined_roots_patch",
+                "chance": 0.3
+              }
+            ],
+            "default": "preternaturalism:_intertwined_shrub_patch"
+          },
+          "type": "minecraft:random_selector"
+        },
+        "decorator": {
+          "config": {
+            "outer": {
+              "config": {},
+              "type": "minecraft:square"
+            },
+            "inner": {
+              "config": {},
+              "type": "minecraft:heightmap"
+            }
+          },
+          "type": "minecraft:decorated"
+        }
+      },
+      "type": "minecraft:decorated"
+    },
+    "decorator": {
+      "config": {
+        "count": 12,
+        "extra_chance": 0.7,
+        "extra_count": 6
+      },
+      "type": "minecraft:count_extra"
+    }
+  },
+  "type": "minecraft:decorated"
+}

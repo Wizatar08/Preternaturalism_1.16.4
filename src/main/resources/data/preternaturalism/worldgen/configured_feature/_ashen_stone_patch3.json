@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:ice_patch",
+  "config": {
+    "state": {
+      "Name": "preternaturalism:ashen_peculiar_stone"
+    },
+    "radius": {
+      "base": 1,
+      "spread": 1
+    },
+    "half_height": 3,
+    "targets": [
+      {
+        "Name": "preternaturalism:ashen_dirt"
+      }
+    ]
+  }
+}

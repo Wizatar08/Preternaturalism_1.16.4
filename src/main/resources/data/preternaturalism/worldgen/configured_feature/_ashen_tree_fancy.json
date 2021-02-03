@@ -1,0 +1,50 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "max_water_depth": 0,
+    "ignore_vines": true,
+    "heightmap": "WORLD_SURFACE_WG",
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "min_clipped_height": 1,
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 2
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "preternaturalism:ashen_log",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "leaves_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "preternaturalism:decayed_leaves",
+        "Properties": {
+          "distance": "2",
+          "persistent": "true"
+        }
+      }
+    },
+    "trunk_placer": {
+      "type": "minecraft:forking_trunk_placer",
+      "base_height": 12,
+      "height_rand_a": 2,
+      "height_rand_b": 3
+    },
+    "foliage_placer": {
+      "type": "minecraft:blob_foliage_placer",
+      "radius": {
+        "base": 2,
+        "spread": 1
+      },
+      "offset": 1,
+      "height": 2
+    },
+    "decorators": []
+  }
+}
