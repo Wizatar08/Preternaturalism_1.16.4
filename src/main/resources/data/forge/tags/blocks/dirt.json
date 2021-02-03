@@ -6,6 +6,8 @@
     "minecraft:coarse_dirt",
     "minecraft:podzol",
     "minecraft:mycelium",
-    "preternaturalism:contaminated_soil"
+    "preternaturalism:contaminated_soil",
+    "preternaturalism:ashen_dirt",
+    "preternaturalism:crystalline_grass_block"
   ]
 }
