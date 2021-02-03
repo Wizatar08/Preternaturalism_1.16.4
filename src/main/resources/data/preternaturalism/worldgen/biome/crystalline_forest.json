@@ -1,5 +1,5 @@
 {
-  "surface_builder": "preternaturalism:contaminated_biomes_surface_builder",
+  "surface_builder": "preternaturalism:crystalline_biomes_surface_builder",
   "depth": 0.125,
   "scale": 0,
   "temperature": 1,
@@ -10,8 +10,8 @@
   "player_spawn_friendly": true,
   "creature_spawn_probability": 0.5,
   "effects": {
-    "sky_color": 6408,
-    "fog_color": 133632,
+    "sky_color": 4753311,
+    "fog_color": 1946862,
     "water_color": 0,
     "water_fog_color": 0,
     "grass_color": 8224125,
@@ -22,7 +22,7 @@
   "spawners": {
     "monster": [
       {
-        "type": "preternaturalism:mutated_spider",
+        "type": "preternaturalism:glowing_hoverdust",
         "weight": 4,
         "minCount": 1,
         "maxCount": 2
@@ -37,17 +37,10 @@
   },
   "features": [
     [
-      "preternaturalism:contaminated_forest_tree_features",
-      "preternaturalism:contaminated_forest_bush_features"
+      "preternaturalism:crystalline_forest_tree_features"
     ],
     [
-      "preternaturalism:contaminated_forest_intertwined_plant_features"
-    ],
-    [
-      "preternaturalism:contaminated_biomes_sickly_sprouts_patch"
-    ],
-    [
-      "minecraft:patch_dead_bush"
+      "preternaturalism:crystalline_forest_bush_features"
     ]
   ]
 }
