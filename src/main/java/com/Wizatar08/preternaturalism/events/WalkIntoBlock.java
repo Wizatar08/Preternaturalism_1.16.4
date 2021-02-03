@@ -29,10 +29,34 @@ public class WalkIntoBlock {
                 livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_CONTAMINATED_SHRUB.get().getDefaultState(), new Vector3d(0.35D, 0.25D, 0.35D));
             }
         }
+        if (world.getBlockState(livingEntity.getPosition()) == BlockInit.INTERTWINED_CONTAMINATED_BUSH.get().getDefaultState()) {
+            if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get()) {
+                livingEntity.attackEntityFrom(ModDamageSource.INTERTWINED_CONTAMINATED_BLOCK, 6F);
+                livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_CONTAMINATED_BUSH.get().getDefaultState(), new Vector3d(0.2D, 0.15D, 0.2D));
+            }
+        }
         if (world.getBlockState(livingEntity.getPosition()) == BlockInit.INTERTWINED_CONTAMINATED_ROOTS.get().getDefaultState()) {
             if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get()) {
                 livingEntity.attackEntityFrom(ModDamageSource.INTERTWINED_CONTAMINATED_BLOCK, 6F);
                 livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_CONTAMINATED_SHRUB.get().getDefaultState(), new Vector3d(0.1D, 0.1D, 0.1D));
+            }
+        }
+        if (world.getBlockState(livingEntity.getPosition()) == BlockInit.INTERTWINED_SHRUB.get().getDefaultState()) {
+            if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get() && livingEntity.getType() != ModEntityTypes.ASHEN_CRAWLER.get()) {
+                livingEntity.attackEntityFrom(ModDamageSource.INTERTWINED_BLOCK, 2F);
+                livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_SHRUB.get().getDefaultState(), new Vector3d(0.35D, 0.25D, 0.35D));
+            }
+        }
+        if (world.getBlockState(livingEntity.getPosition()) == BlockInit.INTERTWINED_BUSH.get().getDefaultState()) {
+            if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get() && livingEntity.getType() != ModEntityTypes.ASHEN_CRAWLER.get()) {
+                livingEntity.attackEntityFrom(ModDamageSource.INTERTWINED_BLOCK, 4F);
+                livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_BUSH.get().getDefaultState(), new Vector3d(0.2D, 0.15D, 0.2D));
+            }
+        }
+        if (world.getBlockState(livingEntity.getPosition()) == BlockInit.INTERTWINED_ROOTS.get().getDefaultState()) {
+            if (livingEntity.getType() != ModEntityTypes.MUTATED_SPIDER.get() && livingEntity.getType() != ModEntityTypes.ASHEN_CRAWLER.get()) {
+                livingEntity.attackEntityFrom(ModDamageSource.INTERTWINED_BLOCK, 5F);
+                livingEntity.setMotionMultiplier(BlockInit.INTERTWINED_SHRUB.get().getDefaultState(), new Vector3d(0.1D, 0.1D, 0.1D));
             }
         }
     }
