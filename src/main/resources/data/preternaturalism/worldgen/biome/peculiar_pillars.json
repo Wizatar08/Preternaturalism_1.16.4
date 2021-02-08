@@ -1,0 +1,34 @@
+{
+  "surface_builder": "preternaturalism:peculiar_pillars_surface_builder",
+  "depth": -1,
+  "scale": 2.5,
+  "temperature": 0.5,
+  "downfall": 0,
+  "precipitation": "none",
+  "temperature_modifier": "none",
+  "category": "plains",
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.5,
+  "effects": {
+    "sky_color": 2818305,
+    "fog_color": 3212549,
+    "water_color": 0,
+    "water_fog_color": 0,
+    "grass_color": 0,
+    "foliage_color": 0,
+    "grass_color_modifier": "none"
+  },
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {
+    "liquid": [
+      "minecraft:cave"
+    ]
+  },
+  "features": [
+      [
+        "preternaturalism:peculiar_pillars_spike_features"
+      ]
+  ]
+}

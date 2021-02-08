@@ -1,0 +1,35 @@
+{
+  "surface_builder": "preternaturalism:scorched_deltas_surface_builder",
+  "depth": 0.125,
+  "scale": -0.085,
+  "temperature": 0.5,
+  "downfall": 0,
+  "precipitation": "none",
+  "temperature_modifier": "none",
+  "category": "plains",
+  "player_spawn_friendly": true,
+  "creature_spawn_probability": 0.5,
+  "effects": {
+    "sky_color": 2818305,
+    "fog_color": 3212549,
+    "water_color": 0,
+    "water_fog_color": 0,
+    "grass_color": 0,
+    "foliage_color": 0,
+    "grass_color_modifier": "none"
+  },
+  "starts": [],
+  "spawners": {
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "liquid": [
+      "minecraft:cave"
+    ]
+  },
+  "features": [
+    [
+      "preternaturalism:scorched_grass_deltas"
+    ]
+  ]
+}
