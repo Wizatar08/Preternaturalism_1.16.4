@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state": {
+      "Name": "preternaturalism:peculiar_stone"
+    },
+    "radius": {
+      "base": 3,
+      "spread": 2
+    },
+    "half_height": 4,
+    "targets": [
+      {
+        "Name": "preternaturalism:peculiar_stone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "can_replace": false,
+    "project": true,
+    "need_water": false,
+    "xspread": 2,
+    "yspread": 32,
+    "zspread": 2,
+    "tries": 2,
+    "state_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "preternaturalism:peculiar_stone"
+      }
+    },
+    "block_placer": {
+      "type": "minecraft:column_placer",
+      "min_size": 32,
+      "extra_size": 24
+    },
+    "whitelist": [
+      {
+        "Name": "minecraft:bedrock"
+      }
+    ],
+    "blacklist": []
+  }
+}
