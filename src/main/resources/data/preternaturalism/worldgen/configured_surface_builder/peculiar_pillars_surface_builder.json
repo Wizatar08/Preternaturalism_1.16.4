@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "preternaturalism:peculiar_stone"
+    },
+    "under_material": {
+      "Name": "preternaturalism:peculiar_stone"
+    },
+    "underwater_material": {
+      "Name": "preternaturalism:contaminated_soil"
+    }
+  }
+}

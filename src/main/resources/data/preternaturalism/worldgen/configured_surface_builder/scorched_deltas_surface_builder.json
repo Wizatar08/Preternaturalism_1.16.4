@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:nether_forest",
+  "config": {
+    "top_material": {
+      "Name": "preternaturalism:orange_scorched_grass_block"
+    },
+    "under_material": {
+      "Name": "preternaturalism:scorched_soil"
+    },
+    "underwater_material": {
+      "Name": "preternaturalism:scorched_soil"
+    }
+  }
+}
