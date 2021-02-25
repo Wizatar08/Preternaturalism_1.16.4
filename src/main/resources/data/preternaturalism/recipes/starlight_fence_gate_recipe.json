@@ -1,0 +1,18 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "SPS",
+        "SPS"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:starlight_planks"
+        },
+        "S": {
+            "item": "minecraft:stick"
+        }
+    }, "result":{
+        "item": "preternaturalism:starlight_fence_gate",
+        "count": 1
+    }
+}

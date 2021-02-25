@@ -1,0 +1,14 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:starlight_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:starlight_slab",
+        "count": 6
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type":"minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "preternaturalism:starlight_log"
+        }
+    ], "result":{
+        "item": "preternaturalism:starlight_planks",
+        "count": 4
+    }
+}

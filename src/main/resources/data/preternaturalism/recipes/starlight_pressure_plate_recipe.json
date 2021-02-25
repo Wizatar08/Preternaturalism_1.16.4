@@ -1,0 +1,13 @@
+{
+    "type":"minecraft:crafting_shaped",
+    "pattern":[
+        "PP"
+    ],
+    "key": {
+        "P": {
+            "item": "preternaturalism:starlight_planks"
+        }
+    }, "result":{
+        "item": "preternaturalism:starlight_pressure_plate"
+    }
+}
