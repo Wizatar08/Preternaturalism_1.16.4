@@ -394,6 +394,23 @@ public class BlockInit {
             .harvestTool(ToolType.PICKAXE)
             .tickRandomly()));
 
+    // Starlight wood
+    public static final RegistryObject<Block> STARLIGHT_LOG = BLOCKS.register("starlight_log", () -> new StarlightLog(MaterialColor.LIGHT_BLUE, Block.Properties.create
+            (Material.WOOD)
+            .hardnessAndResistance(1f,1f)
+            .setRequiresTool()
+            .harvestLevel(0)
+            .harvestTool(ToolType.AXE)
+            .sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> STARLIGHT_PLANKS = BLOCKS.register("starlight_planks", () -> new StarlightPlanks(Block.Properties.from(BlockInit.STARLIGHT_LOG.get())));
+    public static final RegistryObject<Block> STARLIGHT_STAIRS = BLOCKS.register("starlight_stairs", () -> new StarlightStairs(() -> BlockInit.STARLIGHT_PLANKS.get().getDefaultState(), Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_FENCE = BLOCKS.register("starlight_fence", () -> new StarlightFence(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_BUTTON = BLOCKS.register("starlight_button", () -> new StarlightButton(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_PRESSURE_PLATE = BLOCKS.register("starlight_pressure_plate", () -> new StarlightPressurePlate(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_SLAB = BLOCKS.register("starlight_slab", () -> new StarlightSlab(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_DOOR = BLOCKS.register("starlight_door", () -> new StarlightDoor(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+    public static final RegistryObject<Block> STARLIGHT_FENCE_GATE = BLOCKS.register("starlight_fence_gate", () -> new StarlightFenceGate(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
+
     // Diyenate ore
     // Scarlet ore
     // Tungsten ore
