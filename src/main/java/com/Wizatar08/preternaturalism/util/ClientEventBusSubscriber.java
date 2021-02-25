@@ -57,6 +57,7 @@ public class ClientEventBusSubscriber implements IClientPlayNetHandler {
         RenderTypeLookup.setRenderLayer(BlockInit.PURPLE_CRYSTAL_BLOCK.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(BlockInit.CONTAMINATED_DOOR.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.LUMINESCENT_DOOR.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.STARLIGHT_DOOR.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.GLOWMINEOUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.TALL_GLOWMINEOUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.ITEM_CHAMBER.get(), RenderType.getCutout());
@@ -64,6 +65,9 @@ public class ClientEventBusSubscriber implements IClientPlayNetHandler {
         RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_SHRUB.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_BUSH.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_CONTAMINATED_ROOTS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_SHRUB.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(BlockInit.INTERTWINED_ROOTS.get(), RenderType.getCutout());
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.ASHEN_CRAWLER.get(), AshenCrawlerEntityRender::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GLOWING_HOVERDUST.get(), GlowingHoverdustEntityRender::new);
