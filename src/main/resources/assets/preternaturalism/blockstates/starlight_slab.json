@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "preternaturalism:block/starlight_slab" },
+        "type=top": { "model": "preternaturalism:block/starlight_slab_top" },
+        "type=double": { "model": "preternaturalism:block/starlight_planks" }
+    }
+}

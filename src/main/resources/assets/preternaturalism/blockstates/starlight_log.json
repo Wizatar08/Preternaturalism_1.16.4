@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model":  "preternaturalism:block/starlight_log"},
+    "axis=z": {"model":  "preternaturalism:block/starlight_log", "x":  90},
+    "axis=x": {"model":  "preternaturalism:block/starlight_log", "x":  90, "y":  90}
+  }
+}
