@@ -1,0 +1,122 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.preternaturalism.blazing_wave.fly": {
+			"loop": true,
+			"animation_length": 3.64,
+			"bones": {
+				"left_bottom_middle_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 20]
+						},
+						"1.48": {
+							"vector": [0, 0, -15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, 20],
+							"easing": "easeOutQuart"
+						}
+					}
+				},
+				"left_top_middle_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 20]
+						},
+						"1.48": {
+							"vector": [0, 0, -15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, 20],
+							"easing": "easeOutQuart"
+						}
+					}
+				},
+				"left_front_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -20]
+						},
+						"1.48": {
+							"vector": [0, 0, 15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, -20],
+							"easing": "easeOutQuad"
+						}
+					}
+				},
+				"right_bottom_middle_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -20]
+						},
+						"1.48": {
+							"vector": [0, 0, 15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, -20],
+							"easing": "easeOutQuad"
+						}
+					}
+				},
+				"right_top_middle_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, -20]
+						},
+						"1.48": {
+							"vector": [0, 0, 15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, -20],
+							"easing": "easeOutQuad"
+						}
+					}
+				},
+				"right_front_wing": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 20]
+						},
+						"1.48": {
+							"vector": [0, 0, -15],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [0, 0, 20],
+							"easing": "easeOutQuad"
+						}
+					}
+				},
+				"tail": {
+					"rotation": {
+						"0.0": {
+							"vector": [15, 0, 0]
+						},
+						"1.84": {
+							"vector": [-15, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"3.64": {
+							"vector": [15, 0, 0],
+							"easing": "easeOutCubic"
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"1.48": {
+					"effect": "entity.blazing_phoenix.flap"
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
