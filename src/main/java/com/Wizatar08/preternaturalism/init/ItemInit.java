@@ -1,7 +1,7 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.objects.items.*;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.objects.items.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
@@ -90,6 +90,10 @@ public class ItemInit {
 
     public static final RegistryObject<ModSpawnEggItem> MUTATED_SPIDER_SPAWN_EGG = ITEMS.register("mutated_spider_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.MUTATED_SPIDER, 0x000000, 0x2F0000,
+                    new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance).maxStackSize(64)));
+
+    public static final RegistryObject<ModSpawnEggItem> BLAZING_WAVE_SPAWN_EGG = ITEMS.register("blazing_wave_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.BLAZING_WAVE, 0x9A0D00, 0x1A1A1A,
                     new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance).maxStackSize(64)));
 
     // TOOLS
