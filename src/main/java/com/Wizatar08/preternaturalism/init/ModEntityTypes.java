@@ -1,10 +1,7 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.entities.AshenCrawlerEntity;
-import com.inf1n1T388.preternaturalism.entities.ExplosiveAbniteOrbEntity;
-import com.inf1n1T388.preternaturalism.entities.GlowingHoverdustEntity;
-import com.inf1n1T388.preternaturalism.entities.MutatedSpiderEntity;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.entities.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -38,6 +35,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.<ExplosiveAbniteOrbEntity>create(ExplosiveAbniteOrbEntity::new, EntityClassification.MISC)
                             .size(.5F, .5F)
                             .build(new ResourceLocation(Preternaturalism.MOD_ID, "explosive_abnite_orb").toString()));
+
+    public static final RegistryObject<EntityType<BlazingWaveEntity>> BLAZING_WAVE = ENTITY_TYPES
+            .register("blazing_wave",
+                    () -> EntityType.Builder.<BlazingWaveEntity>create(BlazingWaveEntity::new, EntityClassification.MONSTER)
+                            .size(0.35F, 0.25F)
+                            .build(new ResourceLocation(Preternaturalism.MOD_ID, "blazing_wave").toString()));
 
 
 
