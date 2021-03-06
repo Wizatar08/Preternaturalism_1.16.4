@@ -1,19 +1,20 @@
-package com.inf1n1T388.preternaturalism.util;
+package com.Wizatar08.preternaturalism.util;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.client.ContainerHandlerScreen;
-import com.inf1n1T388.preternaturalism.client.IronContainerScreen;
-import com.inf1n1T388.preternaturalism.client.ItemChamberScreen;
-import com.inf1n1T388.preternaturalism.client.entity.EntityRendering;
-import com.inf1n1T388.preternaturalism.client.entity.render.AshenCrawlerEntityRender;
-import com.inf1n1T388.preternaturalism.client.entity.render.GlowingHoverdustEntityRender;
-import com.inf1n1T388.preternaturalism.client.entity.render.MutatedSpiderEntityRender;
-import com.inf1n1T388.preternaturalism.client.tileentityrenderer.ItemChamberRenderer;
-import com.inf1n1T388.preternaturalism.entities.ExplosiveAbniteOrbEntity;
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import com.inf1n1T388.preternaturalism.init.ModContainerTypes;
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.client.ContainerHandlerScreen;
+import com.Wizatar08.preternaturalism.client.IronContainerScreen;
+import com.Wizatar08.preternaturalism.client.ItemChamberScreen;
+import com.Wizatar08.preternaturalism.client.entity.EntityRendering;
+import com.Wizatar08.preternaturalism.client.entity.render.AshenCrawlerEntityRender;
+import com.Wizatar08.preternaturalism.client.entity.render.BlazingWaveEntityRender;
+import com.Wizatar08.preternaturalism.client.entity.render.GlowingHoverdustEntityRender;
+import com.Wizatar08.preternaturalism.client.entity.render.MutatedSpiderEntityRender;
+import com.Wizatar08.preternaturalism.client.tileentityrenderer.ItemChamberRenderer;
+import com.Wizatar08.preternaturalism.entities.ExplosiveAbniteOrbEntity;
+import com.Wizatar08.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.ModContainerTypes;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.network.play.IClientPlayNetHandler;
@@ -72,6 +73,7 @@ public class ClientEventBusSubscriber implements IClientPlayNetHandler {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.ASHEN_CRAWLER.get(), AshenCrawlerEntityRender::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GLOWING_HOVERDUST.get(), GlowingHoverdustEntityRender::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MUTATED_SPIDER.get(), MutatedSpiderEntityRender::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BLAZING_WAVE.get(), BlazingWaveEntityRender::new);
 
         ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.ITEM_CHAMBER.get(), ItemChamberRenderer::new);
     }
