@@ -1,10 +1,8 @@
-package com.inf1n1T388.preternaturalism.entities;
+package com.Wizatar08.preternaturalism.entities;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
-import com.inf1n1T388.preternaturalism.init.SoundInit;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.init.SoundInit;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -15,13 +13,9 @@ import net.minecraft.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.entity.ai.goal.NearestAttackableTargetGoal;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.WaterAvoidingRandomWalkingGoal;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
@@ -57,6 +51,7 @@ public class AshenCrawlerEntity extends MonsterEntity implements IAnimatedEntity
         this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
         this.targetSelector.addGoal(2, (new HurtByTargetGoal(this)).setCallsForHelp());
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, GlowingHoverdustEntity.class, true));
     }
 
     protected float getStandingEyeHeight(Pose poseIn, EntitySize sizeIn) {

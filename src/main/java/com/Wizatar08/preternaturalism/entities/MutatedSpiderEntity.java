@@ -1,8 +1,6 @@
-package com.inf1n1T388.preternaturalism.entities;
+package com.Wizatar08.preternaturalism.entities;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
-import com.inf1n1T388.preternaturalism.init.SoundInit;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;

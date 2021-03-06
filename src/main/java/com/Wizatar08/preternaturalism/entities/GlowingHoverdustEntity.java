@@ -1,15 +1,18 @@
-package com.inf1n1T388.preternaturalism.entities;
+package com.Wizatar08.preternaturalism.entities;
 
+import java.util.Comparator;
 import java.util.EnumSet;
+import java.util.List;
 import javax.annotation.Nullable;
 
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.AbstractRaiderEntity;
+import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -29,12 +32,12 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 
 public class GlowingHoverdustEntity extends MonsterEntity {
-    protected static final DataParameter<Byte> VEX_FLAGS = EntityDataManager.createKey(GlowingHoverdustEntity.class, DataSerializers.BYTE);
     private MobEntity owner;
     @Nullable
     private BlockPos boundOrigin;
     private boolean limitedLifespan;
     private int limitedLifeTicks;
+    private Vector3d orbitOffset = Vector3d.ZERO;
 
     public GlowingHoverdustEntity(EntityType<? extends GlowingHoverdustEntity> entityType, World worldIn) {
         super(entityType, worldIn);
@@ -83,14 +86,17 @@ public class GlowingHoverdustEntity extends MonsterEntity {
 
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(4, new GlowingHoverdustEntity.ChargeAttackGoal());
         this.goalSelector.addGoal(8, new GlowingHoverdustEntity.MoveRandomGoal());
         this.goalSelector.addGoal(9, new LookAtGoal(this, PlayerEntity.class, 3.0F, 1.0F));
         this.goalSelector.addGoal(10, new LookAtGoal(this, MobEntity.class, 8.0F));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, AbstractRaiderEntity.class)).setCallsForHelp());
-        this.targetSelector.addGoal(2, new GlowingHoverdustEntity.CopyOwnerTargetGoal(this));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.addGoal(1, new GlowingHoverdustEntity.CopyOwnerTargetGoal(this));
+        this.targetSelector.addGoal(0, new GlowingHoverdustEntity.AttackPlayerGoal());
+        this.goalSelector.addGoal(0, new GlowingHoverdustEntity.MoveAndAttackPlayer(this));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, MutatedSpiderEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, AshenCrawlerEntity.class, true));
+        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, GhastEntity.class, true));
 
     }
 
@@ -107,7 +113,6 @@ public class GlowingHoverdustEntity extends MonsterEntity {
 
     protected void registerData() {
         super.registerData();
-        this.dataManager.register(VEX_FLAGS, (byte)0);
     }
 
     /**
@@ -152,49 +157,21 @@ public class GlowingHoverdustEntity extends MonsterEntity {
         this.boundOrigin = boundOriginIn;
     }
 
-    private boolean getVexFlag(int mask) {
-        int i = this.dataManager.get(VEX_FLAGS);
-        return (i & mask) != 0;
-    }
-
-    private void setVexFlag(int mask, boolean value) {
-        int i = this.dataManager.get(VEX_FLAGS);
-        if (value) {
-            i = i | mask;
-        } else {
-            i = i & ~mask;
-        }
-
-        this.dataManager.set(VEX_FLAGS, (byte)(i & 255));
-    }
-
-    public boolean isCharging() {
-        return this.getVexFlag(1);
-    }
-
-    public void setCharging(boolean charging) {
-        this.setVexFlag(1, charging);
-    }
-
-    public void setOwner(MobEntity ownerIn) {
-        this.owner = ownerIn;
-    }
-
     public void setLimitedLife(int limitedLifeTicksIn) {
         this.limitedLifespan = true;
         this.limitedLifeTicks = limitedLifeTicksIn;
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_VEX_AMBIENT;
+        return null;
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_VEX_DEATH;
+        return null;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return SoundEvents.ENTITY_VEX_HURT;
+        return null;
     }
 
     /**
@@ -240,7 +217,7 @@ public class GlowingHoverdustEntity extends MonsterEntity {
          * Returns whether an in-progress EntityAIBase should continue executing
          */
         public boolean shouldContinueExecuting() {
-            return GlowingHoverdustEntity.this.getMoveHelper().isUpdating() && GlowingHoverdustEntity.this.isCharging() && GlowingHoverdustEntity.this.getAttackTarget() != null && GlowingHoverdustEntity.this.getAttackTarget().isAlive();
+            return GlowingHoverdustEntity.this.getMoveHelper().isUpdating() && GlowingHoverdustEntity.this.getAttackTarget() != null && GlowingHoverdustEntity.this.getAttackTarget().isAlive();
         }
 
         /**
@@ -250,15 +227,6 @@ public class GlowingHoverdustEntity extends MonsterEntity {
             LivingEntity livingentity = GlowingHoverdustEntity.this.getAttackTarget();
             Vector3d vec3d = livingentity.getEyePosition(1.0F);
             GlowingHoverdustEntity.this.moveController.setMoveTo(vec3d.x, vec3d.y, vec3d.z, 1.0D);
-            GlowingHoverdustEntity.this.setCharging(true);
-            GlowingHoverdustEntity.this.playSound(SoundEvents.ENTITY_VEX_CHARGE, 1.0F, 1.0F);
-        }
-
-        /**
-         * Reset the task's internal state. Called when this task is interrupted by another one
-         */
-        public void resetTask() {
-            GlowingHoverdustEntity.this.setCharging(false);
         }
 
         /**
@@ -268,7 +236,6 @@ public class GlowingHoverdustEntity extends MonsterEntity {
             LivingEntity livingentity = GlowingHoverdustEntity.this.getAttackTarget();
             if (GlowingHoverdustEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
                 GlowingHoverdustEntity.this.attackEntityAsMob(livingentity);
-                GlowingHoverdustEntity.this.setCharging(false);
             } else {
                 double d0 = GlowingHoverdustEntity.this.getDistanceSq(livingentity);
                 if (d0 < 9.0D) {
@@ -305,8 +272,8 @@ public class GlowingHoverdustEntity extends MonsterEntity {
     }
 
     class MoveHelperController extends MovementController {
-        public MoveHelperController(GlowingHoverdustEntity vex) {
-            super(vex);
+        public MoveHelperController(GlowingHoverdustEntity entity) {
+            super(entity);
         }
 
         public void tick() {
@@ -321,16 +288,123 @@ public class GlowingHoverdustEntity extends MonsterEntity {
                     if (GlowingHoverdustEntity.this.getAttackTarget() == null) {
                         Vector3d vec3d1 = GlowingHoverdustEntity.this.getMotion();
                         GlowingHoverdustEntity.this.rotationYaw = -((float)MathHelper.atan2(vec3d1.x, vec3d1.z)) * (180F / (float)Math.PI);
-                        GlowingHoverdustEntity.this.renderYawOffset = GlowingHoverdustEntity.this.rotationYaw;
                     } else {
                         double d2 = GlowingHoverdustEntity.this.getAttackTarget().getPosX() - GlowingHoverdustEntity.this.getPosX();
                         double d1 = GlowingHoverdustEntity.this.getAttackTarget().getPosZ() - GlowingHoverdustEntity.this.getPosZ();
                         GlowingHoverdustEntity.this.rotationYaw = -((float)MathHelper.atan2(d2, d1)) * (180F / (float)Math.PI);
-                        GlowingHoverdustEntity.this.renderYawOffset = GlowingHoverdustEntity.this.rotationYaw;
                     }
+                    GlowingHoverdustEntity.this.renderYawOffset = GlowingHoverdustEntity.this.rotationYaw;
                 }
 
             }
+        }
+    }
+
+    class MoveAndAttackPlayer extends GlowingHoverdustEntity.MoveGoal {
+        private GlowingHoverdustEntity parentEntity;
+
+        private MoveAndAttackPlayer(GlowingHoverdustEntity entity) {
+            this.parentEntity = entity;
+            this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
+        }
+
+        /**
+         * Returns whether execution should begin. You can also read and cache any state necessary for execution in this
+         * method as well.
+         */
+        public boolean shouldExecute() {
+            return GlowingHoverdustEntity.this.getAttackTarget() != null;
+        }
+
+        /**
+         * Returns whether an in-progress EntityAIBase should continue executing
+         */
+        public boolean shouldContinueExecuting() {
+            LivingEntity livingentity = GlowingHoverdustEntity.this.getAttackTarget();
+            if (livingentity == null) {
+                return false;
+            } else if (!livingentity.isAlive()) {
+                return false;
+            } else if ((livingentity instanceof PlayerEntity) && (!livingentity.isSpectator() && !((PlayerEntity) livingentity).isCreative())) {
+                return this.shouldExecute();
+            } else if (!(livingentity instanceof PlayerEntity)) {
+                return this.shouldExecute();
+            } else {
+                return false;
+            }
+        }
+
+        /**
+         * Execute a one shot task or start executing a continuous task
+         */
+        public void startExecuting() {
+        }
+
+        /**
+         * Reset the task's internal state. Called when this task is interrupted by another one
+         */
+        public void resetTask() {
+            GlowingHoverdustEntity.this.setAttackTarget((LivingEntity)null);
+        }
+
+        /**
+         * Keep ticking a continuous task that has already been started
+         */
+        public void tick() {
+            MovementController movementcontroller = this.parentEntity.getMoveHelper();
+            //this.parentEntity.getNavigator().tryMoveToEntityLiving(GlowingHoverdustEntity.this.getAttackTarget(), 32.0);
+            LivingEntity livingentity = GlowingHoverdustEntity.this.getAttackTarget();
+            movementcontroller.setMoveTo(livingentity.getPosX(), livingentity.getPosY(), livingentity.getPosZ(), 1F);
+            GlowingHoverdustEntity.this.orbitOffset = new Vector3d(livingentity.getPosX(), livingentity.getPosYHeight(0.5D), livingentity.getPosZ());
+            if (GlowingHoverdustEntity.this.getBoundingBox().grow((double)0.2F).intersects(livingentity.getBoundingBox())) {
+                GlowingHoverdustEntity.this.attackEntityAsMob(livingentity);
+            }
+
+        }
+    }
+
+    abstract class MoveGoal extends Goal {
+        public MoveGoal() {
+            this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
+        }
+    }
+
+    class AttackPlayerGoal extends Goal {
+        private final EntityPredicate field_220842_b = (new EntityPredicate()).setDistance(64.0D);
+        private int tickDelay = 20;
+
+        private AttackPlayerGoal() {
+        }
+
+        /**
+         * Returns whether execution should begin. You can also read and cache any state necessary for execution in this
+         * method as well.
+         */
+        public boolean shouldExecute() {
+            List<PlayerEntity> list = GlowingHoverdustEntity.this.world.getTargettablePlayersWithinAABB(this.field_220842_b, GlowingHoverdustEntity.this, GlowingHoverdustEntity.this.getBoundingBox().grow(16.0D, 64.0D, 16.0D));
+            if (!list.isEmpty()) {
+                list.sort(Comparator.comparing(Entity::getPosY).reversed());
+                for(PlayerEntity playerentity : list) {
+                    if (GlowingHoverdustEntity.this.canAttack(playerentity, EntityPredicate.DEFAULT)) {
+                        GlowingHoverdustEntity.this.setAttackTarget(playerentity);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /**
+         * Returns whether an in-progress EntityAIBase should continue executing
+         */
+        public boolean shouldContinueExecuting() {
+            LivingEntity livingentity = GlowingHoverdustEntity.this.getAttackTarget();
+            return (livingentity != null && GlowingHoverdustEntity.this.canAttack(livingentity, EntityPredicate.DEFAULT));
+        }
+
+        @Override
+        public void tick() {
+            super.tick();
         }
     }
 
@@ -367,7 +441,7 @@ public class GlowingHoverdustEntity extends MonsterEntity {
                 for(int i = 0; i < 3; ++i) {
                     BlockPos blockpos1 = blockpos.add(GlowingHoverdustEntity.this.rand.nextInt(15) - 7, GlowingHoverdustEntity.this.rand.nextInt(11) - 5, GlowingHoverdustEntity.this.rand.nextInt(15) - 7);
                     if (GlowingHoverdustEntity.this.world.isAirBlock(blockpos1)) {
-                        GlowingHoverdustEntity.this.moveController.setMoveTo((double)blockpos1.getX() + 0.5D, (double)blockpos1.getY() + 0.5D, (double)blockpos1.getZ() + 0.5D, 0.25D);
+                        GlowingHoverdustEntity.this.moveController.setMoveTo((double)blockpos1.getX() + 0.5D, (double)blockpos1.getY() + 0.5D, (double)blockpos1.getZ() + 0.5D, 1D);
                         if (GlowingHoverdustEntity.this.getAttackTarget() == null) {
                             GlowingHoverdustEntity.this.getLookController().setLookPosition((double)blockpos1.getX() + 0.5D, (double)blockpos1.getY() + 0.5D, (double)blockpos1.getZ() + 0.5D, 180.0F, 20.0F);
                         }
