@@ -37,9 +37,10 @@
     "item.preternaturalism.fluid_transporter_contaminated_water": "Contaminated Water Fluid Transporter",
 
     // Spawn eggs
-    "item.preternaturalism.ashen_crawler_spawn_egg": "Spawn Ashen Crawler",
-    "item.preternaturalism.glowing_hoverdust_spawn_egg": "Spawn Glowing Hoverdust",
-    "item.preternaturalism.mutated_spider_spawn_egg": "Spawn Mutated Spider",
+    "item.preternaturalism.ashen_crawler_spawn_egg": "Ashen Crawler Spawn Egg",
+    "item.preternaturalism.glowing_hoverdust_spawn_egg": "Glowing Hoverdust Spawn Egg",
+    "item.preternaturalism.mutated_spider_spawn_egg": "Mutated Spider Spawn Egg",
+    "item.preternaturalism.blazing_wave_spawn_egg": "Blazing Wave Spawn Egg",
 
     // TITANIUM
     // Tools
@@ -213,6 +214,7 @@
     "entity.preternaturalism.glowing_hoverdust": "Glowing Hoverdust",
     "entity.preternaturalism.mutated_spider": "Mutated Spider",
     "entity.preternaturalism.explosive_abnite_orb": "Explosive Abnite Orb",
+    "entity.preternaturalism.blazing_wave": "Blazing Wave",
 
     // Containers
     "container.preternaturalism.container_handler": "Container Handler",
