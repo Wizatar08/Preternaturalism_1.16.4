@@ -1,12 +1,11 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
-import com.inf1n1T388.preternaturalism.tileentity.ItemChamberTileEntity;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.tileentity.ItemChamberTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;

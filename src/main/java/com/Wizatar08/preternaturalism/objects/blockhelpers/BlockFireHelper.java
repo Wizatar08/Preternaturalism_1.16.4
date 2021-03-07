@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.objects.blockhelpers;
+package com.Wizatar08.preternaturalism.objects.blockhelpers;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

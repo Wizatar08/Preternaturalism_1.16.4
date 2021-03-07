@@ -1,13 +1,10 @@
-package com.inf1n1T388.preternaturalism.events;
+package com.Wizatar08.preternaturalism.events;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import net.minecraft.block.Blocks;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.init.BlockInit;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.LightningBoltEntity;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.entity.living.LivingEvent;

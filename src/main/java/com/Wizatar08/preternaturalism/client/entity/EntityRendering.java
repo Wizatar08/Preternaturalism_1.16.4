@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.client.entity;
+package com.Wizatar08.preternaturalism.client.entity;
 
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;

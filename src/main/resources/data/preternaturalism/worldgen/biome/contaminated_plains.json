@@ -1,7 +1,7 @@
 {
   "surface_builder": "preternaturalism:contaminated_biomes_surface_builder",
   "depth": 0.125,
-  "scale": 0,
+  "scale": -0.085,
   "temperature": 1,
   "downfall": 0,
   "precipitation": "none",

@@ -1,10 +1,10 @@
-package com.inf1n1T388.preternaturalism.container;
+package com.Wizatar08.preternaturalism.container;
 
-import com.inf1n1T388.preternaturalism.container.slots.OutputSlot;
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import com.inf1n1T388.preternaturalism.init.ModContainerTypes;
-import com.inf1n1T388.preternaturalism.tileentity.ContainerHandlerTileEntity;
-import com.inf1n1T388.preternaturalism.util.FunctionalIntReferenceHolder;
+import com.Wizatar08.preternaturalism.container.slots.OutputSlot;
+import com.Wizatar08.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.ModContainerTypes;
+import com.Wizatar08.preternaturalism.tileentity.ContainerHandlerTileEntity;
+import com.Wizatar08.preternaturalism.util.FunctionalIntReferenceHolder;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;

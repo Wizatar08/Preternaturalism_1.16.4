@@ -1,11 +1,8 @@
-package com.inf1n1T388.preternaturalism.tileentity;
+package com.Wizatar08.preternaturalism.tileentity;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.container.ItemChamberContainer;
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.container.ItemChamberContainer;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.ComposterBlock;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IClearable;
@@ -17,7 +14,6 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.LockableLootTileEntity;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;

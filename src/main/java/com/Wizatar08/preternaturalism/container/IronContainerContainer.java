@@ -1,19 +1,17 @@
-package com.inf1n1T388.preternaturalism.container;
+package com.Wizatar08.preternaturalism.container;
 
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import com.inf1n1T388.preternaturalism.init.ModContainerTypes;
-import com.inf1n1T388.preternaturalism.tileentity.IronContainerTileEntity;
+import com.Wizatar08.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.ModContainerTypes;
+import com.Wizatar08.preternaturalism.tileentity.IronContainerTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
 
-import javax.annotation.Nullable;
 import java.util.Objects;
 
 public class IronContainerContainer extends Container {

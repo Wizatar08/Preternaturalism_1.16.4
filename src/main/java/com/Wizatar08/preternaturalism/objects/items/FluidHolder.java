@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.objects.items;
+package com.Wizatar08.preternaturalism.objects.items;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;

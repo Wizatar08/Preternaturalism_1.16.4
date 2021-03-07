@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.SoundInit;
+import com.Wizatar08.preternaturalism.init.SoundInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -13,7 +13,6 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.Direction;
 import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;

@@ -1,19 +1,13 @@
-package com.inf1n1T388.preternaturalism.events;
+package com.Wizatar08.preternaturalism.events;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.Preternaturalism;
 
-import com.inf1n1T388.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.BlockInit;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
-import net.minecraft.util.math.RayTraceContext;
-import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.Explosion;
-import net.minecraft.world.World;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;

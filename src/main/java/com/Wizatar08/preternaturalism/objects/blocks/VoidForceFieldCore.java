@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;

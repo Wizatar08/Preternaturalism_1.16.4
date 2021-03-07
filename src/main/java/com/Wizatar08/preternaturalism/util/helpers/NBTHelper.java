@@ -1,7 +1,6 @@
-package com.inf1n1T388.preternaturalism.util.helpers;
+package com.Wizatar08.preternaturalism.util.helpers;
 
-import com.inf1n1T388.preternaturalism.objects.blocks.Quarry;
-import com.inf1n1T388.preternaturalism.tileentity.QuarryTileEntity;
+import com.Wizatar08.preternaturalism.tileentity.QuarryTileEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;

@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.util;
+package com.Wizatar08.preternaturalism.util;
 
 import net.minecraft.util.IntReferenceHolder;
 

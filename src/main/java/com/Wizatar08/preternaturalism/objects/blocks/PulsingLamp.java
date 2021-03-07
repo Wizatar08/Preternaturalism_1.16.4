@@ -1,15 +1,12 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.objects.blockhelpers.BlockFireHelper;
+import com.Wizatar08.preternaturalism.objects.blockhelpers.BlockFireHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorldReader;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import java.util.Random;

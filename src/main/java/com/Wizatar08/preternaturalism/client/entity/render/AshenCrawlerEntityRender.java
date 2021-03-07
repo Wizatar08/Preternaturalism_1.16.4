@@ -1,8 +1,8 @@
-package com.inf1n1T388.preternaturalism.client.entity.render;
+package com.Wizatar08.preternaturalism.client.entity.render;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.client.entity.model.AshenCrawlerEntityModel;
-import com.inf1n1T388.preternaturalism.entities.AshenCrawlerEntity;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.client.entity.model.AshenCrawlerEntityModel;
+import com.Wizatar08.preternaturalism.entities.AshenCrawlerEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

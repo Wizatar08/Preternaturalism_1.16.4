@@ -1,11 +1,7 @@
-package com.inf1n1T388.preternaturalism.recipes;
+package com.Wizatar08.preternaturalism.recipes;
 
-import com.inf1n1T388.preternaturalism.init.RecipeSerializerInit;
-import com.inf1n1T388.preternaturalism.objects.blockproperties.FluidType;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.inventory.IInventory;
+import com.Wizatar08.preternaturalism.init.RecipeSerializerInit;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.NonNullList;

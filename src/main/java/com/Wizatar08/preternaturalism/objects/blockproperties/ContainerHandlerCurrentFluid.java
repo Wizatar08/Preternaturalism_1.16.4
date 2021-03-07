@@ -1,12 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.blockproperties;
+package com.Wizatar08.preternaturalism.objects.blockproperties;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.FluidInit;
-import com.inf1n1T388.preternaturalism.objects.blocks.FluidScanner;
-import net.minecraft.block.BlockState;
-import net.minecraft.client.Minecraft;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.Fluids;
+import com.Wizatar08.preternaturalism.objects.blocks.FluidScanner;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

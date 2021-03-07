@@ -1,7 +1,7 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.recipes.*;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.recipes.*;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.item.crafting.IRecipeType;

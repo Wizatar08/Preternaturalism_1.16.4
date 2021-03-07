@@ -1,8 +1,7 @@
-package com.inf1n1T388.preternaturalism.objects.blockoverrides;
+package com.Wizatar08.preternaturalism.objects.blockoverrides;
 
-import com.inf1n1T388.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.BlockInit;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.block.TallGrassBlock;
 import net.minecraft.util.math.BlockPos;

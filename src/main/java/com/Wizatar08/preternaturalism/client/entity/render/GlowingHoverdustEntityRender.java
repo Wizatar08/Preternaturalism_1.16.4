@@ -1,8 +1,8 @@
-package com.inf1n1T388.preternaturalism.client.entity.render;
+package com.Wizatar08.preternaturalism.client.entity.render;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.client.entity.model.GlowingHoverdustEntityModel;
-import com.inf1n1T388.preternaturalism.entities.GlowingHoverdustEntity;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.client.entity.model.GlowingHoverdustEntityModel;
+import com.Wizatar08.preternaturalism.entities.GlowingHoverdustEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;

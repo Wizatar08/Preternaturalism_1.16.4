@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.objects.buttons;
+package com.Wizatar08.preternaturalism.objects.buttons;
 
 import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.util.text.ITextComponent;

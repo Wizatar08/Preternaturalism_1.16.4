@@ -1,12 +1,10 @@
-package com.inf1n1T388.preternaturalism.objects.blockproperties;
+package com.Wizatar08.preternaturalism.objects.blockproperties;
 
-import com.inf1n1T388.preternaturalism.init.FluidInit;
+import com.Wizatar08.preternaturalism.init.FluidInit;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 
 public enum FluidType implements IStringSerializable {
     NONE("none"),

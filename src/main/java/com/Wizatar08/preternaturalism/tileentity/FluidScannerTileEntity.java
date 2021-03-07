@@ -1,20 +1,11 @@
-package com.inf1n1T388.preternaturalism.tileentity;
+package com.Wizatar08.preternaturalism.tileentity;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.FluidInit;
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
-import com.inf1n1T388.preternaturalism.objects.blockproperties.FluidType;
-import com.inf1n1T388.preternaturalism.objects.blocks.FluidScanner;
-import net.minecraft.block.Block;
-import net.minecraft.fluid.Fluid;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.objects.blocks.FluidScanner;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
-
-import javax.annotation.Nullable;
 
 public class FluidScannerTileEntity extends TileEntity implements ITickableTileEntity {
     public FluidScanner block;

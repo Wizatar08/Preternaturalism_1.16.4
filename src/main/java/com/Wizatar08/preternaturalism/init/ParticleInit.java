@@ -1,16 +1,8 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.particles.QuartzParticle;
-import net.minecraft.client.Minecraft;
-import net.minecraft.particles.ParticleType;
+import com.Wizatar08.preternaturalism.Preternaturalism;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = Preternaturalism.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ParticleInit {

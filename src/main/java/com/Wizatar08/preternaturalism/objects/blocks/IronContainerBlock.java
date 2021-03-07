@@ -1,7 +1,7 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
-import com.inf1n1T388.preternaturalism.tileentity.IronContainerTileEntity;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.tileentity.IronContainerTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -26,7 +26,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-import java.util.Properties;
 import java.util.stream.Stream;
 
 public class IronContainerBlock extends Block {

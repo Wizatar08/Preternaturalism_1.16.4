@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.client.entity.model;
+package com.Wizatar08.preternaturalism.client.entity.model;
 
-import com.inf1n1T388.preternaturalism.entities.AshenCrawlerEntity;
+import com.Wizatar08.preternaturalism.entities.AshenCrawlerEntity;
 import net.minecraft.util.ResourceLocation;
 import software.bernie.geckolib.animation.model.AnimatedEntityModel;
 import software.bernie.geckolib.animation.render.AnimatedModelRenderer;
@@ -25,11 +25,10 @@ public class AshenCrawlerEntityModel extends AnimatedEntityModel<AshenCrawlerEnt
 	private final AnimatedModelRenderer LeftLeg6;
 	private final AnimatedModelRenderer Head;
 
-    public AshenCrawlerEntityModel()
-    {
+    public AshenCrawlerEntityModel() {
         textureWidth = 64;
-    textureHeight = 64;
-    Body = new AnimatedModelRenderer(this);
+    	textureHeight = 64;
+    	Body = new AnimatedModelRenderer(this);
 		Body.setRotationPoint(0.0F, 24.0F, 0.0F);
 		Body.setTextureOffset(0, 0).addBox(-3.0F, -3.0F, -6.0F, 6.0F, 2.0F, 13.0F, 0.0F, false);
 		Body.setModelRendererName("Body");

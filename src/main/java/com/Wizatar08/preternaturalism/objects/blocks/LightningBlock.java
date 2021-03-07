@@ -1,8 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
 import java.util.stream.Stream;
-
-import com.inf1n1T388.preternaturalism.objects.blocks.*;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

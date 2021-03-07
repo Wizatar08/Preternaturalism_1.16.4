@@ -1,21 +1,18 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.IGrowable;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IPlantable;
 
 import javax.annotation.Nullable;
-import java.util.Random;
 
-public class ContaminatedSoilBlock extends Block implements IGrowable {
+public class ContaminatedSoilBlock extends Block {
     public ContaminatedSoilBlock(Properties properties) {
         super(properties);
     }
@@ -27,21 +24,6 @@ public class ContaminatedSoilBlock extends Block implements IGrowable {
 
     @Override
     public boolean canCreatureSpawn(BlockState state, IBlockReader world, BlockPos pos, EntitySpawnPlacementRegistry.PlacementType type, @Nullable EntityType<?> entityType) {
-        return true;
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return worldIn.getBlockState(pos.up()).isAir();
-    }
-
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
-        return true;
-    }
-
-    @Override
-    public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
-
+        return entityType == ModEntityTypes.MUTATED_SPIDER.get();
     }
 }

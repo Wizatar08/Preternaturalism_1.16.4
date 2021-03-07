@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.container.slots;
+package com.Wizatar08.preternaturalism.container.slots;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;

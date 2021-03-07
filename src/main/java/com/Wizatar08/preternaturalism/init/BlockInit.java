@@ -1,8 +1,8 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.objects.blockoverrides.Glowmineous;
-import com.inf1n1T388.preternaturalism.objects.blocks.*;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.objects.blockoverrides.Glowmineous;
+import com.Wizatar08.preternaturalism.objects.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;

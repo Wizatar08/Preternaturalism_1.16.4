@@ -1,7 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.blockproperties;
+package com.Wizatar08.preternaturalism.objects.blockproperties;
 
 import net.minecraft.state.EnumProperty;
-import net.minecraft.state.properties.BedPart;
 import net.minecraft.state.properties.BlockStateProperties;
 
 public class ModBlockStateProperties extends BlockStateProperties {

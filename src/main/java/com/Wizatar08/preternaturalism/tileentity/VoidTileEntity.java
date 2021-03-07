@@ -1,21 +1,13 @@
-package com.inf1n1T388.preternaturalism.tileentity;
+package com.Wizatar08.preternaturalism.tileentity;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
 import net.minecraft.block.Blocks;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.event.world.PistonEvent;
 import net.minecraft.tags.BlockTags;
-
-import javax.annotation.Nullable;
-import java.lang.reflect.Array;
-import java.util.*;
 
 public class VoidTileEntity extends TileEntity implements ITickableTileEntity {
     private int seconds, updateBlockTime, tick;

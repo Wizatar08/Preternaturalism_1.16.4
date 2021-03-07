@@ -1,21 +1,14 @@
-package com.inf1n1T388.preternaturalism.client;
+package com.Wizatar08.preternaturalism.client;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.container.ContainerHandlerContainer;
-import com.inf1n1T388.preternaturalism.objects.blockproperties.ContainerHandlerCurrentFluid;
-import com.inf1n1T388.preternaturalism.objects.blocks.ContainerHandlerBlock;
-import com.inf1n1T388.preternaturalism.objects.buttons.FillBtn;
-import com.inf1n1T388.preternaturalism.tileentity.ContainerHandlerTileEntity;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.container.ContainerHandlerContainer;
+import com.Wizatar08.preternaturalism.objects.blockproperties.ContainerHandlerCurrentFluid;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
-import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.container.Container;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-
-import java.awt.*;
 
 public class ContainerHandlerScreen extends ContainerScreen<ContainerHandlerContainer> {
 

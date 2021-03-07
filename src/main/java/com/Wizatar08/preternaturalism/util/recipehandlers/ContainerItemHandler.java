@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.util.recipehandlers;
+package com.Wizatar08.preternaturalism.util.recipehandlers;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;

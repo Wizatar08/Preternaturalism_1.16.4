@@ -1,7 +1,7 @@
 {
   "surface_builder": "preternaturalism:crystalline_biomes_surface_builder",
   "depth": 0.125,
-  "scale": 0,
+  "scale": -0.085,
   "temperature": 1,
   "downfall": 0,
   "precipitation": "none",
@@ -38,6 +38,9 @@
   "features": [
     [
       "preternaturalism:crystalline_forest_white_tree_features"
+    ],
+    [
+      "preternaturalism:crystalline_forest_white_ice_features"
     ],
     [
       "preternaturalism:crystalline_forest_bush_features"

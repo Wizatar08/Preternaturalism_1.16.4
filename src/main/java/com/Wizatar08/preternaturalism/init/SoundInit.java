@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.Preternaturalism;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.RegistryObject;

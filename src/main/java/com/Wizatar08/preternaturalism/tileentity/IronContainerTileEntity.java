@@ -1,8 +1,8 @@
-package com.inf1n1T388.preternaturalism.tileentity;
+package com.Wizatar08.preternaturalism.tileentity;
 
-import com.inf1n1T388.preternaturalism.container.IronContainerContainer;
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
-import com.inf1n1T388.preternaturalism.objects.blocks.IronContainerBlock;
+import com.Wizatar08.preternaturalism.container.IronContainerContainer;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.objects.blocks.IronContainerBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -26,12 +26,9 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
 import javax.annotation.Nullable;
-import java.awt.*;
 
 public class IronContainerTileEntity extends LockableLootTileEntity {
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(36, ItemStack.EMPTY);

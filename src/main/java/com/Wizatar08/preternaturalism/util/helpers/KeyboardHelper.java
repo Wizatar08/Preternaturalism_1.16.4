@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.util.helpers;
+package com.Wizatar08.preternaturalism.util.helpers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.InputMappings;

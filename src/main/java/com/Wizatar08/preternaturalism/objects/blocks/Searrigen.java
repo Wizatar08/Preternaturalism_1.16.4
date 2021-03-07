@@ -1,7 +1,7 @@
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.SoundInit;
-import com.inf1n1T388.preternaturalism.objects.blockhelpers.BlockFireHelper;
+import com.Wizatar08.preternaturalism.init.SoundInit;
+import com.Wizatar08.preternaturalism.objects.blockhelpers.BlockFireHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;

@@ -1,9 +1,9 @@
-package com.inf1n1T388.preternaturalism.init;
+package com.Wizatar08.preternaturalism.init;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.Preternaturalism;
 
-import com.inf1n1T388.preternaturalism.objects.fluids.ContaminatedWater;
-import com.inf1n1T388.preternaturalism.objects.fluids.ContaminatedWaterProperties;
+import com.Wizatar08.preternaturalism.objects.fluids.ContaminatedWater;
+import com.Wizatar08.preternaturalism.objects.fluids.ContaminatedWaterProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
@@ -11,7 +11,6 @@ import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Rarity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvents;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fml.RegistryObject;

@@ -1,6 +1,6 @@
-package com.inf1n1T388.preternaturalism.objects.items;
+package com.Wizatar08.preternaturalism.objects.items;
 
-import com.inf1n1T388.preternaturalism.util.helpers.KeyboardHelper;
+import com.Wizatar08.preternaturalism.util.helpers.KeyboardHelper;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -12,7 +12,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-import javax.swing.*;
 import java.util.List;
 
 public class SpecialItem extends Item {

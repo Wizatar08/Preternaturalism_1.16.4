@@ -1,8 +1,5 @@
-package com.inf1n1T388.preternaturalism.objects.fluids;
+package com.Wizatar08.preternaturalism.objects.fluids;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraftforge.fluids.FluidAttributes;
 import net.minecraftforge.fluids.ForgeFlowingFluid;

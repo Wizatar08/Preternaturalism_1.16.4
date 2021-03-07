@@ -1,7 +1,6 @@
 //Block.makeCuboidShape(2, 0, 2, 14, 1, 14)
-package com.inf1n1T388.preternaturalism.objects.blocks;
+package com.Wizatar08.preternaturalism.objects.blocks;
 
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -24,7 +23,6 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 
-import javax.annotation.Nullable;
 import java.util.stream.Stream;
 
 public class Mine extends Block {

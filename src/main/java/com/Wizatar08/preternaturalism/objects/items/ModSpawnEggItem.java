@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.objects.items;
+package com.Wizatar08.preternaturalism.objects.items;
 
 import java.util.ArrayList;
 import java.util.List;

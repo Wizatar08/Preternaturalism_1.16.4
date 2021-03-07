@@ -1,9 +1,9 @@
-package com.inf1n1T388.preternaturalism.events;
+package com.Wizatar08.preternaturalism.events;
 
-import com.inf1n1T388.preternaturalism.Preternaturalism;
-import com.inf1n1T388.preternaturalism.init.BlockInit;
-import com.inf1n1T388.preternaturalism.init.ModDamageSource;
-import com.inf1n1T388.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.Preternaturalism;
+import com.Wizatar08.preternaturalism.init.BlockInit;
+import com.Wizatar08.preternaturalism.init.ModDamageSource;
+import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;

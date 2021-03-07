@@ -1,7 +1,7 @@
-package com.inf1n1T388.preternaturalism.tileentity;
+package com.Wizatar08.preternaturalism.tileentity;
 
-import com.inf1n1T388.preternaturalism.init.ModTileEntityTypes;
-import com.inf1n1T388.preternaturalism.util.helpers.NBTHelper;
+import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
+import com.Wizatar08.preternaturalism.util.helpers.NBTHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;

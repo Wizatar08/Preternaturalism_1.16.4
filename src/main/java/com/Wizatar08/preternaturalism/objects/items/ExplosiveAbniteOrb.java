@@ -1,10 +1,7 @@
-package com.inf1n1T388.preternaturalism.objects.items;
+package com.Wizatar08.preternaturalism.objects.items;
 
-import com.inf1n1T388.preternaturalism.entities.ExplosiveAbniteOrbEntity;
-import com.inf1n1T388.preternaturalism.init.ItemInit;
-import net.minecraft.entity.EntityType;
+import com.Wizatar08.preternaturalism.entities.ExplosiveAbniteOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.SnowballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Stats;

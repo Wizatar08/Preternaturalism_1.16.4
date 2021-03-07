@@ -1,4 +1,4 @@
-package com.inf1n1T388.preternaturalism.enchantments;
+package com.Wizatar08.preternaturalism.enchantments;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;

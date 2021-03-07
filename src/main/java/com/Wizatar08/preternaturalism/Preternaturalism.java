@@ -1,11 +1,12 @@
-package com.inf1n1T388.preternaturalism;
+package com.Wizatar08.preternaturalism;
 
-import com.inf1n1T388.preternaturalism.entities.AshenCrawlerEntity;
-import com.inf1n1T388.preternaturalism.entities.GlowingHoverdustEntity;
-import com.inf1n1T388.preternaturalism.entities.MutatedSpiderEntity;
-import com.inf1n1T388.preternaturalism.init.*;
-import com.inf1n1T388.preternaturalism.objects.blocks.CrystallineBerryCrop;
-import com.inf1n1T388.preternaturalism.objects.items.ModSpawnEggItem;
+import com.Wizatar08.preternaturalism.entities.AshenCrawlerEntity;
+import com.Wizatar08.preternaturalism.entities.BlazingWaveEntity;
+import com.Wizatar08.preternaturalism.entities.GlowingHoverdustEntity;
+import com.Wizatar08.preternaturalism.entities.MutatedSpiderEntity;
+import com.Wizatar08.preternaturalism.init.*;
+import com.Wizatar08.preternaturalism.objects.blocks.CrystallineBerryCrop;
+import com.Wizatar08.preternaturalism.objects.items.ModSpawnEggItem;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.entity.EntityType;
@@ -14,8 +15,6 @@ import net.minecraft.item.*;
 import net.minecraft.potion.PotionBrewing;
 import net.minecraft.potion.Potions;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.GameRules;
-import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,16 +22,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.event.lifecycle.*;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 // The value here should match an entry in the META-INF/mods.toml file
 
@@ -44,6 +39,7 @@ public class Preternaturalism {
     public static final String MOD_ID = "preternaturalism";
     public static Preternaturalism instance;
     public static final ResourceLocation PRETERNATURAL_PLACES_DIM_TYPE = new ResourceLocation(MOD_ID, "preternatural_places");
+    //public static GameRules.RuleKey<GameRules.BooleanValue> contaminatedBlocksEffects;
 
     public Preternaturalism() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -80,11 +76,38 @@ public class Preternaturalism {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        /*
+        try{
+            Method createBoolean = ObfuscationReflectionHelper.findMethod(GameRules.BooleanValue.class, "create",boolean.class);
+            createBoolean.setAccessible(true);
+            DeferredWorkQueue.runLater( () ->
+            {
+                try
+                {
+                    Object boolTrue = createBoolean.invoke(GameRules.BooleanValue.class, true);
+                    //contaminatedBlocksEffects = GameRules.register("contaminatedBlocksEffects", GameRules.Category.UPDATES,  (GameRules.RuleType<GameRules.BooleanValue>) boolTrue);
+                }
+                catch (IllegalAccessException e) {
+                    LOGGER.error("Illegal Access Exception!");
+                    e.printStackTrace();
+                }
+                catch (InvocationTargetException e) {
+                    LOGGER.error("Invocation Target Exception!");
+                    e.printStackTrace();
+                }
+            });
+        }
+        catch (IllegalArgumentException e) {
+            LOGGER.error("Illegal Argument Exception!");
+            e.printStackTrace();
+            throw e;
+        }*/
     }
 
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         LOGGER.debug("Registering BlockItems...");
+        LOGGER.debug("Yet another debug screen :P...");
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         BlockInit.BLOCKS.getEntries().stream()
@@ -99,15 +122,8 @@ public class Preternaturalism {
         LOGGER.debug("Registered BlockItems!");
     }
 
-    @SubscribeEvent
-    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event){
-
-    }
-
     @SuppressWarnings("deprecation")
     private void setup(final FMLCommonSetupEvent event) {
-        //AxeItem.BLOCK_STRIPPING_MAP.put(BlockInit.CONTAMINATED_LOG.get(), BlockInit.CONTAMINATED_OBSIDIAN.get());
-
         // Register Compostable - Composter
         ComposterBlock.registerCompostable(0.4F, ItemInit.CRYSTALLINE_BERRY.get());
         ComposterBlock.registerCompostable(0.3F, ItemInit.CRYSTALLINE_BERRY_SEEDS.get());
@@ -119,6 +135,7 @@ public class Preternaturalism {
             GlobalEntityTypeAttributes.put(ModEntityTypes.ASHEN_CRAWLER.get(), AshenCrawlerEntity.setAttributes().create());
             GlobalEntityTypeAttributes.put(ModEntityTypes.GLOWING_HOVERDUST.get(), GlowingHoverdustEntity.setAttributes().create());
             GlobalEntityTypeAttributes.put(ModEntityTypes.MUTATED_SPIDER.get(), MutatedSpiderEntity.setAttributes().create());
+            GlobalEntityTypeAttributes.put(ModEntityTypes.BLAZING_WAVE.get(), BlazingWaveEntity.setAttributes().create());
         });
     }
 
@@ -128,10 +145,6 @@ public class Preternaturalism {
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event){
 
-    }
-
-    @SubscribeEvent
-    public static void loadCompleteEvent(FMLLoadCompleteEvent event){
     }
 
     @SubscribeEvent
