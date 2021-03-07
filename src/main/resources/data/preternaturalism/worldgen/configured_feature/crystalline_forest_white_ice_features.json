@@ -1,0 +1,55 @@
+{
+  "config": {
+    "feature": {
+      "config": {
+        "feature": {
+          "config": {
+            "features": [
+              {
+                "feature": "preternaturalism:_packed_ice_patch",
+                "chance": 0.4
+              },
+              {
+                "feature": "preternaturalism:_blue_ice_patch",
+                "chance": 0.3
+              },
+              {
+                "feature": "preternaturalism:_packed_ice_pile",
+                "chance": 0.2
+              },
+              {
+                "feature": "preternaturalism:_blue_ice_pile",
+                "chance": 0.1
+              }
+            ],
+            "default": "preternaturalism:_packed_ice_patch"
+          },
+          "type": "minecraft:random_selector"
+        },
+        "decorator": {
+          "config": {
+            "outer": {
+              "config": {},
+              "type": "minecraft:square"
+            },
+            "inner": {
+              "config": {},
+              "type": "minecraft:heightmap"
+            }
+          },
+          "type": "minecraft:decorated"
+        }
+      },
+      "type": "minecraft:decorated"
+    },
+    "decorator": {
+      "config": {
+        "count": 5,
+        "extra_chance": 0.5,
+        "extra_count": 4
+      },
+      "type": "minecraft:count_extra"
+    }
+  },
+  "type": "minecraft:decorated"
+}
