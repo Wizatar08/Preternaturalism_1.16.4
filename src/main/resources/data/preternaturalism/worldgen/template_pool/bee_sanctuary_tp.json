@@ -14,18 +14,99 @@
     {
       "weight": 75,
       "element": {
-        "location": "preternaturalism:bee_sanctuary/rooms/bee_room",
+        "location": "preternaturalism:bee_sanctuary/rooms/bee_exclusive_room",
         "processors": "minecraft:empty",
 		"projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
     {
-      "weight": 75,
+      "weight": 25,
       "element": {
-        "location": "preternaturalism:bee_sanctuary/rooms/tree_room",
+        "location": "preternaturalism:bee_sanctuary/rooms/tree_room_1",
         "processors": "minecraft:empty",
 		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 25,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/tree_room_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 25,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/tree_room_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 25,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/tree_room_4",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/glowing_hoverdust_room_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/glowing_hoverdust_room_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/glowing_hoverdust_room_3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 15,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/glowing_hoverdust_room_4",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/honey_room_1",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 20,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/honey_room_2",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     }
