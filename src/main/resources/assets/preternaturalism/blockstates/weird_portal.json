@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "preternaturalism:block/weird_portal_ns"
+    },
+    "axis=z": {
+      "model": "preternaturalism:block/weird_portal_ew"
+    }
+  }
+}

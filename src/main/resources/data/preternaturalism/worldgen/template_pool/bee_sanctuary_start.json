@@ -1,0 +1,15 @@
+{
+  "name": "preternaturalism:bee_sanctuary_start",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "preternaturalism:bee_sanctuary/rooms/bs_main",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

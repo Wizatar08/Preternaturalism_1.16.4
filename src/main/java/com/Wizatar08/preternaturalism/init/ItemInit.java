@@ -51,6 +51,13 @@ public class ItemInit {
     public static final RegistryObject<Item> METALLIC_OBSIDIAN_INGOT = ITEMS.register("metallic_obsidian_ingot", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
     public static final RegistryObject<Item> SCARLET_WAVE = ITEMS.register("scarlet_wave", () -> new ScarletWave(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
 
+    // RELICS
+    public static final RegistryObject<Item> EMERALD_RELIC = ITEMS.register ("emerald_relic", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
+    public static final RegistryObject<Item> DIAMOND_RELIC = ITEMS.register ("diamond_relic", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
+    public static final RegistryObject<Item> GOLD_RELIC = ITEMS.register ("gold_relic", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
+    public static final RegistryObject<Item> IRON_RELIC = ITEMS.register ("iron_relic", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
+    public static final RegistryObject<Item> TITANIUM_RELIC = ITEMS.register ("titanium_relic", () -> new Item(new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));
+
     // TITANIUM
     // Tools
     public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new SwordItem(ModItemTier.TITANIUM, 8, -2, new Item.Properties().group(Preternaturalism.PreternaturalismItemGroup.instance)));

@@ -32,6 +32,11 @@
     "item.preternaturalism.backwards_bucket": "Backwards Bucket",
     "item.preternaturalism.metallic_obsidian_ingot": "Metallic Obsidian Ingot",
     "item.preternaturalism.scarlet_wave": "Scarlet Wave",
+    "item.preternaturalism.emerald_relic": "Emerald Relic",
+    "item.preternaturalism.diamond_relic": "Diamond Relic",
+    "item.preternaturalism.gold_relic": "Gold Relic",
+    "item.preternaturalism.iron_relic": "Iron Relic",
+    "item.preternaturalism.titanium_relic": "Titanium Relic",
 
     "item.preternaturalism.fluid_transporter_lava": "Lava Fluid Transporter",
     "item.preternaturalism.fluid_transporter_contaminated_water": "Contaminated Water Fluid Transporter",
