@@ -47,7 +47,6 @@ public class VoidForceFieldCoreTileEntity extends TileEntity implements ITickabl
         if(world.isBlockPowered(pos) && this.blocksRemoved < 50){
             execute();
         }
-        Preternaturalism.LOGGER.info("Blocks removed: " + this.blocksRemoved);
     }
 
     private void deactivate(){

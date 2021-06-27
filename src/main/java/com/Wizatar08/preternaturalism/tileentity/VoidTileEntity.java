@@ -22,10 +22,9 @@ public class VoidTileEntity extends TileEntity implements ITickableTileEntity {
         this(ModTileEntityTypes.VOID_BLOCK.get());
     }
 
-
-
     @Override
     public void tick() {
+        /*
         if(!initialized){
             init();
         }
@@ -34,8 +33,10 @@ public class VoidTileEntity extends TileEntity implements ITickableTileEntity {
         if(tick >= updateBlockTime){
             execute();
         }
-    }
 
+         */
+    }
+    /*
     private void init(){
         tick = 0;
         seconds = 20;
@@ -194,4 +195,6 @@ public class VoidTileEntity extends TileEntity implements ITickableTileEntity {
         }
         return false;
     }
+
+     */
 }

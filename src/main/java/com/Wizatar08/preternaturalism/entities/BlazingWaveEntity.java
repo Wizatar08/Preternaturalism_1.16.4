@@ -1,21 +1,20 @@
 package com.Wizatar08.preternaturalism.entities;
 
+import com.Wizatar08.preternaturalism.init.BlockInit;
 import com.Wizatar08.preternaturalism.init.ModEntityTypes;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
-import net.minecraft.entity.ai.controller.FlyingMovementController;
 import net.minecraft.entity.ai.controller.MovementController;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.GhastEntity;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.passive.CatEntity;
+import net.minecraft.entity.passive.BeeEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -41,6 +40,7 @@ public class BlazingWaveEntity extends FlyingEntity implements IAnimatedEntity {
     private int lifetime, attackCooldown;
     private boolean playerSpawned;
     private Vector3d orbitOffset = Vector3d.ZERO;
+    private int timeBeforeLocatingPulsingLamp = 0;
 
     private EntityAnimationManager manager = new EntityAnimationManager();
     private AnimationController controller = new EntityAnimationController(this, "moveController", 20, this::animationPredicate);
@@ -63,6 +63,7 @@ public class BlazingWaveEntity extends FlyingEntity implements IAnimatedEntity {
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, AshenCrawlerEntity.class, true));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, GhastEntity.class, true));
         this.goalSelector.addGoal(0, new BlazingWaveEntity.SpeedRamAttackGoal(this));
+        //this.goalSelector.addGoal(3, new BlazingWaveEntity.FindPulsingLampGoal(this));
         //this.goalSelector.addGoal(0, new BlazingWaveEntity.RammingAttackGoal(this));
     }
 
@@ -166,6 +167,10 @@ public class BlazingWaveEntity extends FlyingEntity implements IAnimatedEntity {
             this.world.addParticle(ParticleTypes.LARGE_SMOKE, this.getPosXRandom(0.5D), this.getPosYRandom(), this.getPosZRandom(0.5D), 0.0D, 0.0D, 0.0D);
         }
         this.world.addParticle(ParticleTypes.FLAME, this.getPosXRandom(1.0D), this.getPosYRandom(), this.getPosZRandom(1.0D), 0.2D, 0.2D, 0.0D);
+
+        if (this.timeBeforeLocatingPulsingLamp > 0) {
+            this.timeBeforeLocatingPulsingLamp--;
+        }
 
         if (this.getAttackTarget() != null) {
             this.setAIMoveSpeed(256f);
@@ -372,7 +377,7 @@ public class BlazingWaveEntity extends FlyingEntity implements IAnimatedEntity {
             MovementController movementcontroller = this.parentEntity.getMoveHelper();
             //this.parentEntity.getNavigator().tryMoveToEntityLiving(BlazingWaveEntity.this.getAttackTarget(), 32.0);
             LivingEntity livingentity = BlazingWaveEntity.this.getAttackTarget();
-            movementcontroller.setMoveTo(livingentity.getPosX(), livingentity.getPosY(), livingentity.getPosZ(), 256F);
+            movementcontroller.setMoveTo(livingentity.getPosX(), livingentity.getPosY(), livingentity.getPosZ(), 1682F);
             BlazingWaveEntity.this.orbitOffset = new Vector3d(livingentity.getPosX(), livingentity.getPosYHeight(0.5D), livingentity.getPosZ());
             if (BlazingWaveEntity.this.getBoundingBox().grow((double)0.2F).intersects(livingentity.getBoundingBox())) {
                 BlazingWaveEntity.this.attackEntityAsMob(livingentity);
@@ -428,6 +433,60 @@ public class BlazingWaveEntity extends FlyingEntity implements IAnimatedEntity {
             super.tick();
         }
     }
+
+    /*
+    class FindPulsingLampGoal extends Goal {
+        private BlazingWaveEntity parentEntity;
+        private Predicate<BlockState> blockStatePredicate = (blockState) -> blockState == BlockInit.PULSING_LAMP.get().getDefaultState();
+        private int distance = 32;
+        private BlockPos nearestPulsingLampPos;
+
+        private FindPulsingLampGoal(BlazingWaveEntity entity) {
+            this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
+            this.parentEntity = entity;
+        }
+
+        @Override
+        public boolean shouldExecute() {
+            return BlazingWaveEntity.this.timeBeforeLocatingPulsingLamp <= 0 && getNearestPulsingLamp(distance) != null;
+        }
+
+        @Override
+        public boolean shouldContinueExecuting() {
+            return getNearestPulsingLamp(distance) != null;
+        }
+
+        @Override
+        public void tick() {
+            if (nearestPulsingLampPos != null && (nearestPulsingLampPos = getNearestPulsingLamp(distance)) != null) {
+                BlazingWaveEntity.this.navigator.tryMoveToXYZ(nearestPulsingLampPos.getX() + 0.5, nearestPulsingLampPos.getY() + 0.5, nearestPulsingLampPos.getZ() + 0.5, 256f);
+            }
+        }
+
+        @Override
+        public void resetTask() {
+            super.resetTask();
+            BlazingWaveEntity.this.timeBeforeLocatingPulsingLamp = 160;
+            nearestPulsingLampPos = null;
+        }
+
+        private BlockPos getNearestPulsingLamp(int distance) {
+            BlockPos blazingWaveBlockpos = BlazingWaveEntity.this.getPosition();
+            BlockPos.Mutable currentBlockPos = new BlockPos.Mutable();
+            for (int x = 0; x <= distance; x = x > 0 ? -x : 1 - x) {
+                for (int y = 0; y <= distance; y = y > 0 ? -y : 1 - y) {
+                    for (int z = 0; z <= distance; z = z > 0 ? -z : 1 - z) {
+                        currentBlockPos.setAndOffset(blazingWaveBlockpos, x, y, z);
+                        if (blockStatePredicate.test(BlazingWaveEntity.this.world.getBlockState(currentBlockPos))) {
+                            return currentBlockPos;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+    }
+    */
 
     private <E extends Entity> SoundEvent soundListener(SoundKeyframeEvent<E> event) {
         if (event.sound.equals("entity.blazing_phoenix.flap")) {

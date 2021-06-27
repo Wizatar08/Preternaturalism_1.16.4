@@ -411,9 +411,15 @@ public class BlockInit {
     public static final RegistryObject<Block> STARLIGHT_DOOR = BLOCKS.register("starlight_door", () -> new StarlightDoor(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
     public static final RegistryObject<Block> STARLIGHT_FENCE_GATE = BLOCKS.register("starlight_fence_gate", () -> new StarlightFenceGate(Block.Properties.from(BlockInit.STARLIGHT_PLANKS.get())));
 
+    public static final RegistryObject<Block> ABYSS_OF_BINDING = BLOCKS.register("abyss_of_binding", () -> new AbyssOfBinding(Block.Properties.create(
+        Material.BARRIER)
+        .hardnessAndResistance(-1)
+    ));
     // Diyenate ore
     // Scarlet ore
     // Tungsten ore
+
+    // PORTAL BLOCK: The Abyss of Binding
 }
 
 

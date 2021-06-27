@@ -29,4 +29,6 @@ public class ModTileEntityTypes {
     public static final RegistryObject<TileEntityType<FluidScannerTileEntity>> FLUID_SCANNER = TILE_ENTITY_TYPES.register("fluid_scanner", () -> TileEntityType.Builder.create(FluidScannerTileEntity::new, BlockInit.FLUID_SCANNER.get()).build(null));
 
     public static final RegistryObject<TileEntityType<ItemChamberTileEntity>> ITEM_CHAMBER = TILE_ENTITY_TYPES.register("item_chamber", () -> TileEntityType.Builder.create(ItemChamberTileEntity::new, BlockInit.ITEM_CHAMBER.get()).build(null));
+
+    public static final RegistryObject<TileEntityType<AbyssOfBindingTileEntity>> ABYSS_OF_BINDING = TILE_ENTITY_TYPES.register("abyss_of_binding", () -> TileEntityType.Builder.create(AbyssOfBindingTileEntity::new, BlockInit.ABYSS_OF_BINDING.get()).build(null));
 }

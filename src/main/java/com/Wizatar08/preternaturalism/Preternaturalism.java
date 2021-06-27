@@ -5,6 +5,7 @@ import com.Wizatar08.preternaturalism.entities.BlazingWaveEntity;
 import com.Wizatar08.preternaturalism.entities.GlowingHoverdustEntity;
 import com.Wizatar08.preternaturalism.entities.MutatedSpiderEntity;
 import com.Wizatar08.preternaturalism.init.*;
+import com.Wizatar08.preternaturalism.objects.blocks.AbyssOfBinding;
 import com.Wizatar08.preternaturalism.objects.blocks.CrystallineBerryCrop;
 import com.Wizatar08.preternaturalism.objects.items.ModSpawnEggItem;
 import com.Wizatar08.preternaturalism.structure_init.STConfiguredStructures;
@@ -177,7 +178,7 @@ public class Preternaturalism {
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         BlockInit.BLOCKS.getEntries().stream()
-                .filter(block -> !(block.get() instanceof CrystallineBerryCrop) && !(block.get() instanceof FlowingFluidBlock))
+                .filter(block -> !(block.get() instanceof CrystallineBerryCrop) && !(block.get() instanceof FlowingFluidBlock) && !(block.get() instanceof AbyssOfBinding))
                 .map(RegistryObject::get).forEach(block -> {
             final Item.Properties properties = new Item.Properties().group(PreternaturalismItemGroup.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
