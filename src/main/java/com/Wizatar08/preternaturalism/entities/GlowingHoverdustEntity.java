@@ -6,6 +6,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.Wizatar08.preternaturalism.init.ModEntityTypes;
+import com.Wizatar08.preternaturalism.init.SoundInit;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
@@ -171,7 +172,7 @@ public class GlowingHoverdustEntity extends MonsterEntity {
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {
-        return null;
+        return SoundInit.GLOWING_HOVERDUST_HURT.get();
     }
 
     /**

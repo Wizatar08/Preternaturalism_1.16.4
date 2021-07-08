@@ -415,11 +415,16 @@ public class BlockInit {
         Material.BARRIER)
         .hardnessAndResistance(-1)
     ));
+    public static final RegistryObject<Block> ENERGY_EXTRACTOR = BLOCKS.register("energy_extractor", () -> new EnergyExtractor(Block.Properties.create
+            (Material.IRON)
+            .hardnessAndResistance(2.5f,5f)
+            .setRequiresTool()
+            .harvestLevel(2)
+            .harvestTool(ToolType.PICKAXE)
+            .sound(SoundType.ANVIL)));
     // Diyenate ore
     // Scarlet ore
     // Tungsten ore
-
-    // PORTAL BLOCK: The Abyss of Binding
 }
 
 

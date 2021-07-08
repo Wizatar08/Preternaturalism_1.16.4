@@ -20,6 +20,8 @@ public class SoundInit {
             () -> new SoundEvent(new ResourceLocation(Preternaturalism.MOD_ID, "block.searrage.ambient")));
     public static final RegistryObject<SoundEvent> SEARRIGEN_BURNS = SOUNDS.register("block.searrigen.ambient",
             () -> new SoundEvent(new ResourceLocation(Preternaturalism.MOD_ID, "block.searrigen.ambient")));
+    public static final RegistryObject<SoundEvent> GLOWING_HOVERDUST_HURT = SOUNDS.register("entity.glowing_hoverdust.hurt",
+            () -> new SoundEvent(new ResourceLocation(Preternaturalism.MOD_ID, "entity.glowing_hoverdust.hurt")));
 
 }
 

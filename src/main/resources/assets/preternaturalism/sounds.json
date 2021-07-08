@@ -49,5 +49,15 @@
         "stream": true
       }
     ]
+  },
+  "entity.glowing_hoverdust.hurt": {
+    "category": "entity",
+    "subtitle": "Glowing Hoverdust Hurts",
+    "sounds": [
+      {
+        "name": "preternaturalism:entity/entity.glowing_hoverdust.hurt",
+        "stream": true
+      }
+    ]
   }
 }

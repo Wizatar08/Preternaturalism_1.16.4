@@ -1,5 +1,6 @@
 package com.Wizatar08.preternaturalism.objects.blocks;
 
+import com.Wizatar08.preternaturalism.Preternaturalism;
 import com.Wizatar08.preternaturalism.init.BlockInit;
 import com.Wizatar08.preternaturalism.init.ModTileEntityTypes;
 import com.Wizatar08.preternaturalism.objects.blockproperties.ContainerHandlerCurrentFluid;
@@ -8,6 +9,7 @@ import com.Wizatar08.preternaturalism.tileentity.ContainerHandlerTileEntity;
 import com.Wizatar08.preternaturalism.util.recipehandlers.ContainerItemHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -40,6 +42,7 @@ public class ContainerHandlerBlock extends Block {
 
     public BlockPos pos;
     public World world;
+    private TileEntity tileEntity;
 
     public ContainerHandlerBlock(Properties properties) {
         super(properties);
@@ -53,7 +56,7 @@ public class ContainerHandlerBlock extends Block {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntityTypes.CONTAINER_HANDLER.get().create();
+        return tileEntity = ModTileEntityTypes.CONTAINER_HANDLER.get().create();
     }
 
     @Override
@@ -150,13 +153,6 @@ public class ContainerHandlerBlock extends Block {
                 worldIn.playSound(d0, d1, d2, SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1.0F, 1.0F,
                         false);
             }
-
-            Direction direction = stateIn.get(FACING);
-            Direction.Axis direction$axis = direction.getAxis();
-            double d4 = rand.nextDouble() * 0.6D - 0.3D;
-            double d5 = direction$axis == Direction.Axis.X ? (double) direction.getXOffset() * 0.52D : d4;
-            double d6 = rand.nextDouble() * 6.0D / 16.0D;
-            double d7 = direction$axis == Direction.Axis.Z ? (double) direction.getZOffset() * 0.52D : d4;
         }
     }
 
@@ -190,4 +186,20 @@ public class ContainerHandlerBlock extends Block {
             worldIn.removeTileEntity(pos);
         }
     }
+
+    public ActionResultType canPlaceArbitraryItem(ItemStack items) {
+        Preternaturalism.LOGGER.info(((((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(0).getItem() + ", " + Blocks.AIR.asItem() + ", " + ((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() + ", " + items.getItem() + ", " + (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1) + ", " + items.getCount() + ", " + items.getMaxStackSize()))));
+        if (((((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() == Blocks.AIR.asItem()) ||
+                (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() == items.getItem() && (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getCount() + items.getCount() <= items.getMaxStackSize())))) {
+            return ActionResultType.SUCCESS;
+        }
+        return ActionResultType.FAIL;
+    }
+
+    public void addArbitraryItem(ItemStack items) {
+        Preternaturalism.LOGGER.info("ADD ITEM: " + items);
+        ((ContainerHandlerTileEntity) tileEntity).getInventory().insertItem(1, items.copy(), true);
+    }
+
+
 }
