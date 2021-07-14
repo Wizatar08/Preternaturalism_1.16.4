@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "preternaturalism:items/dragon_essence_filled_titanium_plated_container"
+    }
+}

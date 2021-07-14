@@ -186,20 +186,4 @@ public class ContainerHandlerBlock extends Block {
             worldIn.removeTileEntity(pos);
         }
     }
-
-    public ActionResultType canPlaceArbitraryItem(ItemStack items) {
-        Preternaturalism.LOGGER.info(((((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(0).getItem() + ", " + Blocks.AIR.asItem() + ", " + ((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() + ", " + items.getItem() + ", " + (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1) + ", " + items.getCount() + ", " + items.getMaxStackSize()))));
-        if (((((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() == Blocks.AIR.asItem()) ||
-                (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getItem() == items.getItem() && (((ContainerHandlerTileEntity) tileEntity).getInventory().getStackInSlot(1).getCount() + items.getCount() <= items.getMaxStackSize())))) {
-            return ActionResultType.SUCCESS;
-        }
-        return ActionResultType.FAIL;
-    }
-
-    public void addArbitraryItem(ItemStack items) {
-        Preternaturalism.LOGGER.info("ADD ITEM: " + items);
-        ((ContainerHandlerTileEntity) tileEntity).getInventory().insertItem(1, items.copy(), true);
-    }
-
-
 }

@@ -47,9 +47,6 @@ public class AbyssOfBinding extends Block {
     @Override
     public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
 
-        // DIMENSIONKEY:
-        // ResourceKey[minecraft:dimension / preternaturalism:preternatural_places]
-        // ResourceKey[minecraft:dimension / minecraft:overworld]
         RegistryKey<World> prePlacesWorld = null;
         String currWorldLocation = "";
         try {
@@ -72,7 +69,6 @@ public class AbyssOfBinding extends Block {
                 return;
             }
             double x = entityIn.getPosX(), y = entityIn.getPosY(), z = entityIn.getPosZ();
-            //Preternaturalism.LOGGER.info(entityIn.getPosX() + ", " + entityIn.getPosY() + ", " + entityIn.getPosZ());
             entityIn.changeDimension(serverworld, new ITeleporter() {
                 @Override
                 public Entity placeEntity(Entity entity, ServerWorld currentWorld, ServerWorld destWorld, float yaw, Function<Boolean, Entity> repositionEntity) {
